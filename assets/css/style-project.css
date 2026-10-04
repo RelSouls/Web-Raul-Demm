@@ -10,11 +10,6 @@
   padding: 0 20px;
 }
 
-/* Espaciado superior para que el contenido no quede oculto bajo el header fijo */
-/* body {
-  padding-top: 5.4rem;
-} */
-
 header{
    background-color: rgb(from var(--dark-color) r g b / 0.5);
 }
@@ -57,7 +52,7 @@ header{
     padding-left: 20px;
     padding-right: 20px;
     box-sizing: border-box;
-    overflow: hidden; /* Esto corta cualquier espacio fantasma que intente escapar por abajo */
+    overflow: hidden;
 }
 
 /* Título dinámico del banner */
@@ -68,17 +63,10 @@ header{
   text-align: center;
   text-transform: uppercase;
   margin: 0;
-  margin: 0;
   line-height: 0.85;
   white-space: nowrap;
-  
-  /* --- TOQUE PRO DE DIRECCIÓN DE ARTE --- */
-  letter-spacing: 0.15em;            /* Espaciado elegante y proporcional al tamaño de la letra */
-  
-  /* text-shadow: 0 4px 25px rgba(0, 0, 0, 0.5); */
+  letter-spacing: 0.15em;
   transition: all 0.2s ease;
-  
-  /* Empuje milimétrico hacia abajo para que muerda el borde */
   transform: translateY(0.1em);
 }
 
@@ -107,19 +95,27 @@ header{
   gap: 1rem;
 }
 
+/* VISOR PRINCIPAL CON CENTRADO FLEXBOX Y FRANJAS NEGRAS */
 .visor-principal {
   width: 100%;
   height: 450px;
-  background: #111;
+  background: #1111111b; /* Fondo oscuro para las franjas (letterbox/pillarbox) */
   border-radius: 8px;
   overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .visor-principal img,
 .visor-principal video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain; /* Garantiza que se vea completa con franjas si no encaja */
 }
 
 /* Selector de miniaturas inferior (Carrusel horizontal) */
@@ -206,7 +202,6 @@ header{
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-/* Estado final cuando se activa la animación */
 .columna-info .tarjeta-categoria.visible {
   opacity: 1;
   transform: translateX(0);
@@ -241,12 +236,6 @@ header{
    VISOR MULTIMEDIA EN PRIMER PLANO (LIGHTBOX)
    ========================================== */
 
-/* El visor principal de la página ahora muestra el cursor de lupa/clic */
-.visor-principal {
-  cursor: pointer;
-  position: relative;
-}
-
 .visor-principal::after {
   content: "ampliar";
   font-family: var(--text-font);
@@ -254,7 +243,7 @@ header{
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* <-- Esto lo centra de forma milimétrica */
+  transform: translate(-50%, -50%);
   transform-origin: center center;
   background: var(--primary-color);
   color: var(--light-color);
@@ -269,7 +258,6 @@ header{
   opacity: 1;
 }
 
-/* Fondo oscuro de pantalla completa */
 .lightbox-overlay {
   position: fixed;
   top: 0;
@@ -286,13 +274,11 @@ header{
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-/* Estado activo cuando se abre */
 .lightbox-overlay.activo {
   opacity: 1;
   visibility: visible;
 }
 
-/* Contenedor interno para asegurar que la imagen/vídeo se vea completa */
 .lightbox-contenido {
   max-width: 90vw;
   max-height: 90vh;
@@ -311,12 +297,11 @@ header{
   max-height: 100%;
   width: auto;
   height: auto;
-  object-fit: contain; /* Garantiza que se vea completa aunque sea vertical u horizontal */
+  object-fit: contain;
   border-radius: 4px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-/* Botón de cierre (X) */
 .lightbox-btn-cerrar {
   position: absolute;
   top: 20px;
@@ -341,7 +326,7 @@ header{
 
 @media (max-width: 900px) {
   .proyecto-grid-layout {
-    grid-template-columns: 1fr; /* Pasa a una sola columna en pantallas medianas/pequeñas */
+    grid-template-columns: 1fr;
   }
 }
 
@@ -351,7 +336,68 @@ header{
   }
   
   .titulo-banner {
-    white-space: normal; /* Permite salto de línea en móviles para evitar recortes */
+    white-space: normal;
     font-size: 4rem !important; 
+  }
+
+  /* Altura del visor en móvil y mantenimiento de propiedades flex */
+  .visor-principal {
+    height: 350px !important; 
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .selector-miniaturas {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    overflow-x: visible !important;
+    padding-bottom: 0 !important;
+  }
+
+  /* PÁGINAS DETALLE */
+  body, html {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .detalle-contenedor, 
+  .writing-detail-container {
+    width: 100% !important;
+    max-width: 100vw !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    box-sizing: border-box !important;
+  }
+
+  .columna-multimedia,
+  .writing-media-browser,
+  .visualizer-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;       
+    min-height: unset !important;  
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;     
+    overflow: hidden !important;   
+    box-sizing: border-box !important;
+    margin-bottom: 1.5rem !important;
+    background: transparent !important;
+  }
+
+  .columna-multimedia img,
+  .writing-media-browser img,
+  .visualizer-container img {
+    display: block !important;
+    width: auto !important;
+    height: auto !important;
+    max-width: 100% !important;  
+    max-height: 100% !important; 
+    object-fit: contain !important; 
+    margin: auto !important;     
   }
 }
