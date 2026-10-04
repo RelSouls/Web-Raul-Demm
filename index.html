@@ -231,8 +231,8 @@
             <div class="contacto-overlay-content">
                 
                 <!-- Recuadro del formulario -->
-                <div class="contacto-form-container">
-                    <form action="https://formspree.io/f/xvkgeeld" method="POST" class="contacto-form">
+                <div class="contacto-form-container" id="contact-form">
+                    <form action="https://formspree.io/f/xvkgeeld" method="POST" target="_blank" class="contacto-form">
                         <div class="form-group">
                             <input type="text" name="nombre" placeholder="Nombre" required>
                         </div>
@@ -244,6 +244,7 @@
                         </div>
                         <button type="submit" class="cta-primary-form">Enviar mensaje</button>
                     </form>
+                    <p id="form-status" style="display:none; color: var(--primary-color);">¡Mensaje enviado con éxito!</p>
                 </div>
 
                 <!-- Datos de contacto en 3 columnas -->
@@ -426,6 +427,7 @@
         });
     });
     </script>
+    
     <!-- CARGAR PROYECTOS | ORGANIZACIÓN TETRIS-->
     <script>
     async function cargarContenidoSeccion(categoria) {
