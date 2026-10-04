@@ -188,8 +188,8 @@
     "titulo": "Coc Shouting Products",
     "dimension": "2x1",
     "categoria": "Campaña creativa en vídeo para <i>One Show</i>",
-    "imagenMiniatura": "assets/img/CoC_Thumbnail_Filter.png",
-    "imagenColor": "assets/img/CoC_Thumbnail_Color.png",
+    "imagenMiniatura": "assets/img/Coc_Thumbnail_Filter.png",
+    "imagenColor": "assets/img/Coc_Thumbnail_Color.png",
     "multimedia": [
       {
         "tipo": "imagen",
