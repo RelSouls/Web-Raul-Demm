@@ -9,11 +9,11 @@
     "genero": "NOVELA | Ficción & Drama",
     "estado": "En proceso | Borrador 1",
     "sinopsis": "assets/txt/ElFabricanteDeRelojes_Sinopsis.txt",
-    "imagenMiniatura": "assets/img/writings/ElFabricanteDeRelojes_Cover.png",
+    "imagenMiniatura": "assets/img/writings/ElFabricanteDeRelojes_Cover.webp",
     "multimediaPrincipal": [
         { 
         "tipo": "imagen", 
-        "url": "assets/img/writings/ElFabricanteDeRelojes_Cover.png", 
+        "url": "assets/img/writings/ElFabricanteDeRelojes_Cover.webp", 
         "alt": "El Fabricante de Relojes"
         }
     ],
@@ -35,23 +35,23 @@
     "genero": "NOVELA | Fantasía oscura & Misterio",
     "estado": "Finalizado 2025 | Buscando editorial",
     "sinopsis": "assets/txt/ElBrilloEscarlata_Sinopsis.txt",
-    "imagenMiniatura": "assets/img/writings/ElBrilloEscarlata_Cover.png",
+    "imagenMiniatura": "assets/img/writings/ElBrilloEscarlata_Cover.webp",
     "multimediaPrincipal": [
         { 
         "tipo": "imagen", 
-        "url": "assets/img/writings/ElBrilloEscarlata_Mockup.png", 
+        "url": "assets/img/writings/ElBrilloEscarlata_Mockup.webp", 
         "alt": "El Brillo Escarlata Mockup"
         }
     ],
     "personajes": [
       {
-        "url": "assets/img/writings/ElBrilloEscarlata_Personaje_Thomas.png",
+        "url": "assets/img/writings/ElBrilloEscarlata_Personaje_Thomas.webp",
         "descripcion": "De elevado temperamento y fuertes convicciones, Thomas Morren viaja a la lejana ciudad de Holdrave con el único propósito de comprobar que sus peores pesadillas se han cumplido. Tras abjurar de su familia y las riquezas que lo habrían acompañado en vida, no le queda más remedio que comprobar que, en efecto, lo ha perdido todo.<br><br>Ataviado con una gabardina sencilla y un sombrero de copa, encontrará que no le queda nada por lo que luchar salvo un recuerdo, y lo dará todo por protegerlo, aunque eso le lleve directo a desenlaces que ninguna mente humana podría llegar a imaginar.<br><br>Tal vez el destino tenga algo todavía reservado para él."
       }
     ],
     "objetos": [
       {
-        "url": "assets/img/writings/ElBrilloEscarlata_Objeto_Foltiak.png",
+        "url": "assets/img/writings/ElBrilloEscarlata_Objeto_Foltiak.webp",
         "descripcion": "Botella de Foltiak elaborada en las destilerías de la Fábrica de Fumus. Su extraordinario sabor es capaz de cautivar los paladares más refinados. <br><br>Se dice que la fórmula milagrosa del Foltiak fue hallada accidentalmente por Oriana Moylin, mujer del propio lord Fumus; habladurías que, de ser ciertas, dejarían en incógnita el propósito original de sus investigaciones."
       }
     ],
@@ -67,11 +67,11 @@
     "genero": "RELATO | Ficción & Misterio",
     "estado": "Finalizado | Publicado | 2024",
     "sinopsis": "assets/txt/WhalersBay_Sinopsis.txt",
-    "imagenMiniatura": "assets/img/writings/WhalersBay_Cover.png",
+    "imagenMiniatura": "assets/img/writings/WhalersBay_Cover.webp",
     "multimediaPrincipal": [
         {
         "tipo": "imagen", 
-        "url": "assets/img/writings/WhalersBay_Cover_Alt.png",
+        "url": "assets/img/writings/WhalersBay_Cover_Alt.webp",
         "alt": "Whaler's Bay"
         }
     ],
@@ -93,11 +93,11 @@
     "genero": "RELATO | Drama psicológico",
     "estado": "Finalizado | Publicado | 2025",
     "sinopsis": "assets/txt/Cenizas_Sinopsis.txt",
-    "imagenMiniatura": "assets/img/writings/Cenizas_Cover.png",
+    "imagenMiniatura": "assets/img/writings/Cenizas_Cover.webp",
     "multimediaPrincipal": [
         { 
         "tipo": "imagen", 
-        "url": "assets/img/writings/Cenizas_Cover_Alt.png", 
+        "url": "assets/img/writings/Cenizas_Cover_Alt.webp", 
         "alt": "Bajo las Cenizas"
         }
     ],
