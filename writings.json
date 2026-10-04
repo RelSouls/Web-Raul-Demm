@@ -1,0 +1,112 @@
+[
+  {
+    "id": "escritura-2",
+    "dimension": "1x2",
+    "titulo": "El Fabricante de Relojes",
+    "autor": "Raúl de Miguel Martín",
+    "disenadorPortada": "Raúl Demm | Unsplash: Caleb Toranzo",
+    "palabras": "~140.000",
+    "genero": "NOVELA | Ficción & Drama",
+    "estado": "En proceso | Borrador 1",
+    "sinopsis": "assets/txt/ElFabricanteDeRelojes_Sinopsis.txt",
+    "imagenMiniatura": "assets/img/writings/ElFabricanteDeRelojes_Cover.png",
+    "multimediaPrincipal": [
+        { 
+        "tipo": "imagen", 
+        "url": "assets/img/writings/ElFabricanteDeRelojes_Cover.png", 
+        "alt": "El Fabricante de Relojes"
+        }
+    ],
+    "personajes": [
+      
+    ],
+    "objetos": [
+      
+    ],
+    "fragmentoTxt": ""
+  },
+  {
+    "id": "escritura-1",
+    "dimension": "1x2",
+    "titulo": "El Brillo Escarlata",
+    "autor": "Raúl de Miguel Martín",
+    "disenadorPortada": "Raúl de Miguel Martín",
+    "palabras": "~260.000",
+    "genero": "NOVELA | Fantasía oscura & Misterio",
+    "estado": "Finalizado 2025 | Buscando editorial",
+    "sinopsis": "assets/txt/ElBrilloEscarlata_Sinopsis.txt",
+    "imagenMiniatura": "assets/img/writings/ElBrilloEscarlata_Cover.png",
+    "multimediaPrincipal": [
+        { 
+        "tipo": "imagen", 
+        "url": "assets/img/writings/ElBrilloEscarlata_Mockup.png", 
+        "alt": "El Brillo Escarlata Mockup"
+        }
+    ],
+    "personajes": [
+      {
+        "url": "assets/img/writings/ElBrilloEscarlata_Personaje_Thomas.png",
+        "descripcion": "De elevado temperamento y fuertes convicciones, Thomas Morren viaja a la lejana ciudad de Holdrave con el único propósito de comprobar que sus peores pesadillas se han cumplido. Tras abjurar de su familia y las riquezas que lo habrían acompañado en vida, no le queda más remedio que comprobar que, en efecto, lo ha perdido todo.<br><br>Ataviado con una gabardina sencilla y un sombrero de copa, encontrará que no le queda nada por lo que luchar salvo un recuerdo, y lo dará todo por protegerlo, aunque eso le lleve directo a desenlaces que ninguna mente humana podría llegar a imaginar.<br><br>Tal vez el destino tenga algo todavía reservado para él."
+      }
+    ],
+    "objetos": [
+      {
+        "url": "assets/img/writings/ElBrilloEscarlata_Objeto_Foltiak.png",
+        "descripcion": "Botella de Foltiak elaborada en las destilerías de la Fábrica de Fumus. Su extraordinario sabor es capaz de cautivar los paladares más refinados. <br><br>Se dice que la fórmula milagrosa del Foltiak fue hallada accidentalmente por Oriana Moylin, mujer del propio lord Fumus; habladurías que, de ser ciertas, dejarían en incógnita el propósito original de sus investigaciones."
+      }
+    ],
+    "fragmentoTxt": "assets/txt/ElBrilloEscarlata_Fragmento.txt"
+  },
+  {
+    "id": "escritura-3",
+    "dimension": "1x1",
+    "titulo": "La Sombra de Whaler's Bay",
+    "autor": "Raúl de Miguel Martín",
+    "disenadorPortada": "Raúl Demm | Pexels: Joshuan Barboza",
+    "palabras": "~2.300",
+    "genero": "RELATO | Ficción & Misterio",
+    "estado": "Finalizado | Publicado | 2024",
+    "sinopsis": "assets/txt/WhalersBay_Sinopsis.txt",
+    "imagenMiniatura": "assets/img/writings/WhalersBay_Cover.png",
+    "multimediaPrincipal": [
+        {
+        "tipo": "imagen", 
+        "url": "assets/img/writings/WhalersBay_Cover_Alt.png",
+        "alt": "Whaler's Bay"
+        }
+    ],
+    "personajes": [
+      
+    ],
+    "objetos": [
+      
+    ],
+    "fragmentoTxt": "assets/txt/WhalersBay_Completo.txt"
+  },
+  {
+    "id": "escritura-4",
+    "dimension": "1x1",
+    "titulo": "Bajo las Cenizas",
+    "autor": "Raúl de Miguel Martín",
+    "disenadorPortada": "Raúl Demm | Pexels: Юлия Зяблова",
+    "palabras": "~1.080",
+    "genero": "RELATO | Drama psicológico",
+    "estado": "Finalizado | Publicado | 2025",
+    "sinopsis": "assets/txt/Cenizas_Sinopsis.txt",
+    "imagenMiniatura": "assets/img/writings/Cenizas_Cover.png",
+    "multimediaPrincipal": [
+        { 
+        "tipo": "imagen", 
+        "url": "assets/img/writings/Cenizas_Cover_Alt.png", 
+        "alt": "Bajo las Cenizas"
+        }
+    ],
+    "personajes": [
+      
+    ],
+    "objetos": [
+      
+    ],
+    "fragmentoTxt": "assets/txt/Cenizas_Completo.txt"
+  }
+]

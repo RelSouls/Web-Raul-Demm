@@ -1,0 +1,250 @@
+[
+  {
+    "id": "proyecto-1",
+    "titulo": "NOIA",
+    "dimension": "2x2",
+    "categoria": "Proyecto de <i>branding</i>, ilustración, maquetación & <i>packaging</i>",
+    "imagenMiniatura": "assets/img/Noia_Thumbnail_Filter.png",
+    "imagenColor": "assets/img/Noia_Thumbnail_Color.png",
+    "multimedia": [
+      {
+        "tipo": "imagen",
+        "url": "assets/img/Noia_img_3.jpg"
+      },
+      {
+        "tipo": "imagen",
+        "url": "assets/img/Noia_img_1.jpg"
+      },
+      {
+        "tipo": "imagen",
+        "url": "assets/img/Noia_img_4.jpg"
+      },
+      {
+        "tipo": "imagen",
+        "url": "assets/img/Noia_img_5.jpg"
+      },
+      {
+        "tipo": "imagen",
+        "url": "assets/img/Noia_img_6.jpg"
+      },
+      {
+        "tipo": "imagen",
+        "url": "assets/img/Noia_img_7.jpg"
+      },
+      {
+        "tipo": "imagen",
+        "url": "assets/img/Noia_Thumbnail_Color.png"
+      }
+    ],
+    "descripcion": "NOIA es una baraja de veintidós Arcanos Mayores, cimentada sobre la estructura tradicional del Tarot y basada en patologías psicológicas, con el objetivo de generar una experiencia que trascienda la disciplina de la adivinación e invite al individuo a sumergirse en un viaje de autoconocimiento, con identidad y significado propios, hacia los complejos límites de la mente.<br><br>No se trata solo de representar afecciones; se trata de crear un entorno afín de autoexploración. Una peregrinación a los lugares más recónditos y oscuros de la psique humana a través de un lenguaje grotesco y visceral. Muchos utilizan el Tarot no como medio de adivinación, sino como una herramienta de reflexión y cultivación personal. Este proyecto eleva ese concepto a la dimensión oculta de <i>lo que no se habla</i>, colocando un espejo frente a uno mismo que revela la destrucción silenciosa del ‘yo’.<br><br>El reto de este proyecto es transformar los universalmente conocidos Arcanos Mayores en algo nuevo (sin caer en estereotipos como Depresión = persona triste o Ansiedad = persona nerviosa), y para ello he establecido un hilo conductor, relacionando carta original con patología, y luego dándole un significado global a esa dimensión concreta de la mente, con el objetivo de que cualquiera pueda identificarse. El resultado son estas criaturas, a las que he llamado <i>Tejedores</i>, en referencia a las anomalías que tejen. Por ejemplo, el Alquimista representa los bucles, las relaciones tóxicas y la adicción al refuerzo intermitente, y proviene de la Ludopatía; el Taxidermista significa la interpretación y los significados moldeados a efecto engañoso por la propia mente, y proviene de la Esquizofrenia; o el Enjambre, sin ir más lejos, representa la sobrecarga de estímulos y la dificultad de priorizar u organizarse, inspirado directamente en el Trastorno de Déficit de Atención.<br><br>La identidad visual busca un fuerte contraste entre lo geométrico y lo orgánico, así como un enfrentamiento entre el detalle y el minimalismo, representando con firmeza la constante dualidad de la psique humana. Y, por supuesto, el color de las pasiones como protagoinista de esta visceral historia.",
+    "detallesExtra": "Software: Photoshop, InDesign e Illustrator; Cinema4D solo para la portada"
+  },
+  {
+    "id": "proyecto-2",
+    "titulo": "Arkitekt",
+    "dimension": "1x1",
+    "categoria": "Proyecto editorial",
+    "imagenMiniatura": "assets/img/Arkitekt_Thumbnail_Filter.png",
+    "imagenColor": "assets/img/Arkitekt_Thumbnail_Color.png",
+    "multimedia": [
+      {
+        "tipo": "imagen",
+        "url": "assets/img/Arkitekt_img_1.png"
+      },
+      {
+        "tipo": "imagen",
+        "url": "assets/img/Arkitekt_img_2.png"
+      },
+      {
+        "tipo": "imagen",
+        "url": "assets/img/Arkitekt_img_3.png"
+      },
+      {
+        "tipo": "imagen",
+        "url": "assets/img/Arkitekt_img_4.png"
+      },
+      {
+        "tipo": "imagen",
+        "url": "assets/img/Arkitekt_img_5.png"
+      },
+      {
+        "tipo": "imagen",
+        "url": "assets/img/Arkitekt_Thumbnail_Color.png"
+      }
+    ],
+    "descripcion": "Para el desarrollo de este proyecto de maquetación, el briefing pedía explorar un estilo arquitectónico de libre elección dirigido a un público apasionado de la arquitectura.<br><br>Opté por la arquitectura del hierro porque me sugería un potencial fascinante: la extrema rectitud geométrica de sus formas puesta en directo contraste los vacíos en sus redes de vigas entrecruzadas. La estética de construir a través tanto de lo positivo como lo negativo.<br><br>El hierro pesado cobra protagonismo a través de los grandes números a pie de página, que desplazan las composiciones hacia abajo. Las páginas disponen de mayor margen en las alturas en referencia al cristal liviano que protagoniza grandes ventanales. Los bloques de texto y los recursos gráficos son geométricos y cuadriculados, como las redes de vigas. <br><br>Un ecosistema editorial para recordar la historia de una revolución arquitectónica que puso patas arriba la concepción del arte.",
+    "detallesExtra": "Software: Illustrator e InDesign"
+  },
+  {
+    "id": "proyecto-3",
+    "titulo": "Antimatter",
+    "dimension": "1x1",
+    "categoria": "Proyecto de maquetación y <i>packaging</i>",
+    "imagenMiniatura": "assets/img/Antimatter_Thumbnail_Filter.png",
+    "imagenColor": "assets/img/Antimatter_Thumbnail_Color.png",
+    "multimedia": [
+      {
+        "tipo": "imagen",
+        "url": "assets/img/Antimatter_img_1.png"
+      },
+      {
+        "tipo": "imagen",
+        "url": "assets/img/Antimatter_img_2.jpg"
+      },
+      {
+        "tipo": "imagen",
+        "url": "assets/img/Antimatter_img_3.jpg"
+      }
+    ],
+    "descripcion": "Este proyecto, desde el mismo principio, se erigió como un gran reto de diseño y narrativa. El briefing pedía diseñar un disco de vinilo para el lanzamiento del álbum ficticio de Nala Sinephro, titulado Antimatter. Y aquí entra la cuestión: Antimateria. ¿Cómo se representa gráficamente algo que no tiene forma, y que trasciende hasta algo tan elevado como la compresión abstracta del cosmos? <br><br>El reto, y a la vez el atractivo, de este diseño radicaba precisamente en eso: aunar la naturaleza infinita y vacua del universo junto con el estilo etéreo e introspectivo de Nala en una única y consolidada identidad visual.<br><br>Lo hice a través de la únida mínima gráfica: simples líneas, trazadas con aparente entropía pero suficiente precisión como para sugerir significado. La fuerza de este diseño reside en el contraste entre los vastos espacios vacíos y los hilos delgados que sugieren ideas abstractas: el microcosmos como reflejo del macrocosmos es la esencia de Antimatter.",
+    "detallesExtra": "Software: Photoshop e InDesign"
+  },
+  {
+    "id": "proyecto-4",
+    "titulo": "Corteza Hotel",
+    "dimension": "1x1",
+    "categoria": "Proyecto de <i>branding</i>",
+    "imagenMiniatura": "assets/img/CortezaHotel_Thumbnail_Filter.png",
+    "imagenColor": "assets/img/CortezaHotel_Thumbnail_Color.png",
+    "multimedia": [
+      {
+        "tipo": "imagen",
+        "url": "assets/img/CortezaHotel_img_1.png"
+      },
+      {
+        "tipo": "imagen",
+        "url": "assets/img/CortezaHotel_img_2.png"
+      },
+      {
+        "tipo": "imagen",
+        "url": "assets/img/CortezaHotel_img_3.png"
+      },
+      {
+        "tipo": "imagen",
+        "url": "assets/img/CortezaHotel_img_4.png"
+      },
+      {
+        "tipo": "imagen",
+        "url": "assets/img/CortezaHotel_img_5.png"
+      },
+      {
+        "tipo": "imagen",
+        "url": "assets/img/CortezaHotel_img_6.png"
+      },
+      {
+        "tipo": "imagen",
+        "url": "assets/img/CortezaHotel_img_7.png"
+      },
+      {
+        "tipo": "imagen",
+        "url": "assets/img/CortezaHotel_img_8.png"
+      },
+      {
+        "tipo": "imagen",
+        "url": "assets/img/CortezaHotel_img_9.png"
+      }
+    ],
+    "descripcion": "Este diseño de marca corresponde a un hotel de lujo ficticio situado en la Sierra de Madrid. El briefing especificaba que el diseño debía integrar modernidad y lujo con la experiencia de alojarse en pleno corazon de la naturaleza.<br><br>El símbolo de la bellota como isotipo se eligió no solo por su abundancia en la región de Madrid, sino también por sus connotaciones económicas y de calidad en el ámbito gastronómico (productos ibéricos de bellota).<br><br>Toda la identidad visual de esta marca se hizo con la idea de enfrentar minimalismo en favor de un estilo moderno, con los colores, patrones, texturas y —en general— sensaciones que debe evocar un entorno rústico en sintonía con la naturaleza.",
+    "detallesExtra": "Software: Illustrator & Photoshop"
+  },
+  {
+    "id": "proyecto-5",
+    "titulo": "Demon Slayer Pinball",
+    "dimension": "1x2",
+    "categoria": "Proyecto de animación 2D",
+    "imagenMiniatura": "assets/img/Pinball_Thumbnail_Filter.png",
+    "imagenColor": "assets/img/Pinball_Thumbnail_Color.png",
+    "multimedia": [
+      {
+        "tipo": "video",
+        "url": "assets/video/Pinball_video_1.webm"
+      }
+    ],
+    "descripcion": "La premisa de este proyecto era simple: diseñar un pinball con temática de libre elección y animarlo. Yo, en una época donde estaba enganchado con fuerza a la serie de animación japones Demon Slayer (Kimetsu no Yaiba), decidí hacer un grandioso diseño inspirado en sus personajes demoníacos, las Lunas Superiores.<br><br>Una vez hecho el diseño, la animación fue la parte más complicada, pero resultó muy ventajosa para poner en práctica conocimientos introductorios y principios básicos de la animación.<br><br>Por último, añadí efectos visuales de chispas, efectos sonoros, y la banda sonora de la propia serie para endulzar el conjunto.<br><br>El resultado se tornó satisfactorio, sobre todo teniendo en cuenta que era una de mis primeras aproximaciones al mundo de la animación 2D.",
+    "detallesExtra": "Software: Photoshop & After Effects"
+  },
+  {
+    "id": "proyecto-6",
+    "titulo": "Unmemoriam",
+    "dimension": "1x1",
+    "categoria": "Proyecto de diseño 3D e iluminación",
+    "imagenMiniatura": "assets/img/Unmemoriam_Thumbnail_Filter.png",
+    "imagenColor": "assets/img/Unmemoriam_Thumbnail_Color.png",
+    "multimedia": [
+      {
+        "tipo": "imagen",
+        "url": "assets/img/Unmemoriam_Thumbnail_Color.png"
+      },
+      {
+        "tipo": "imagen",
+        "url": "assets/img/Unmemoriam_img_1.png"
+      }
+    ],
+    "descripcion": "Este proyecto de diseño 3D pedía realizar un bodegón de temática libre para poner en práctica composición e iluminación.<br><br>Unmemoriam representa cómo traí ese concepto hacia mi estilo: ya no se trataba solo de un bodegón, sino de una entorno, un ambiente, una narrativa... El misterioso pantano de un quinqué de luciérnagas, un cielo de color antinatural y una barca sin dueño.<br><br>En este proyecto en concreto, me pareció sumamente curioso comprobar cuánto puede cambiar la emoción que transmite una obra con un cambio tan sencillo como poner o retirar unos árboles. Con los sauces, la atmósfera se vuelve misteriosa y opresiva, y sugiere extraños sucesos o significados sin desvelar; sin ellos, este triste pantano se convierte en el reflejo de la melancolía de algo que ha quedado abandonado.<br><br>En cualquiera de los casos, la barca seguirá vacía, y algún día las luciérnagas hallarán un nuevo hogar y se olvidarán del quinqué que una vez lo fue.",
+    "detallesExtra": "Software: Cinema4D & Redshift"
+  },
+  {
+    "id": "proyecto-7",
+    "titulo": "Coc Shouting Products",
+    "dimension": "2x1",
+    "categoria": "Campaña creativa en vídeo para <i>One Show</i>",
+    "imagenMiniatura": "assets/img/CoC_Thumbnail_Filter.png",
+    "imagenColor": "assets/img/CoC_Thumbnail_Color.png",
+    "multimedia": [
+      {
+        "tipo": "imagen",
+        "url": "assets/img/CoC_img_1.jpg"
+      },
+      {
+        "tipo": "imagen",
+        "url": "assets/img/CoC_img_2.jpg"
+      },
+      {
+        "tipo": "imagen",
+        "url": "assets/img/CoC_img_3.jpg"
+      },
+      {
+        "tipo": "video",
+        "url": "assets/video/CoC_video_1.webm"
+      }
+    ],
+    "descripcion": "Un compañero y yo desarrollamos esta campaña creativa para nuestra participación en el concurso One Show Young Ones 2026. El objetivo era transformar Clash of Clans, un juego para móviles que ya gozaba de éxito, en un icono de la cultura pop para preparar de antemano el lanzamiento de la serie de Netflix. El briefing especificaba que debíamos encontrar la manera de trascender la pantalla y llegar a todo el mundo, incluso a aquellos que nunca habían oído hablar del juego, y crear un fenómeno viral en redes sociales.<br><br>¿Cómo lo conseguimos? Apelando a la emoción más común de la sociedad actual: la ansiedad. Convertimos un problema en un medio de comunicación que combinaba un conflicto global con la narrativa estridente y desenfadada de CoC, y lo solucionamos con productos para gritar: accesorios que absorben el ruido y permiten gritar y desahogarse en cualquier momento y lugar.<br><br>Pequeños santuarios portátiles que servían como vía de escape y con altísimo potencial viral.",
+    "detallesExtra": "Software: Photoshop, Illustrator, After Effects & Premiere Pro"
+  },
+  {
+    "id": "proyecto-8",
+    "titulo": "Red Swamp",
+    "dimension": "1x1",
+    "categoria": "Proyecto de <i>branding</i> y animación de logotipo 2D",
+    "imagenMiniatura": "assets/img/RedSwamp_Thumbnail_Filter.png",
+    "imagenColor": "assets/img/RedSwamp_Thumbnail_Color.png",
+    "multimedia": [
+      {
+        "tipo": "video",
+        "url": "assets/video/RedSwamp_video_1.webm"
+      }
+    ],
+    "descripcion": "El objetivo de este proyecto era diseñar un logotipo que me representase como diseñador y después animarlo, aunque yo lo tomé con cierto enfoque de branding para poder contemplar mejor la imagen al completo.<br><br>Si bien ahora he abandonado la idea de Red Swamp (con cierto pesar) en pos de una identidad más definida y más madurada, con un mayor foco en mi perfil profesional —y sin las presiones de tiempos de entrega—, creo que la estética divertida de Red Swamp sigue encajando mucho con ciertos aspectos de mi persona.<br><br> Y me encanta la dimensión dramática que aporta un buen pantano.<br><br>Después de diseñar el logo, la animación acabó siendo un gran desafío, ya que tiene un montón de elementos simultáneos sucediéndose a la vez: pequeños detalles como las hojas o los juncos zarandeándose con el movimiento, las lianas extendiéndose entre las 'd' y la 'S', las salpicaduras, o la entrada en escena del buen batracio que caracteriza a Red Swamp.<br><br>Pero no podía decir que no al potente sentido de la atmósfera que blande un pantano teñido del color de la sangre.</p>",
+    "detallesExtra": "Software: Illustrator & After Effects"
+  },
+  {
+    "id": "proyecto-9",
+    "titulo": "Vacuum",
+    "dimension": "1x2",
+    "categoria": "Proyecto de diseño 3D y cartelería",
+    "imagenMiniatura": "assets/img/Vacuum_Thumbnail_Filter.png",
+    "imagenColor": "assets/img/Vacuum_Thumbnail_Color.png",
+    "multimedia": [
+      {
+        "tipo": "imagen",
+        "url": "assets/img/Vacuum_img_1.jpg"
+      },
+      {
+        "tipo": "imagen",
+        "url": "assets/img/Vacuum_img_2.jpg"
+      }
+    ],
+    "descripcion": "Para este proyecto de 3D e iluminación, había que diseñar una botella de perfume y luego plasmarla en una campaña de cartelería ficticia.<br><br>Entonando un poco la sonata de la sesibilidad, reconozco que aproveché la ocasión para canalizar mi propio vacío interior hacia la creación de este producto, esperando que sirviera como reflejo con el que más gente pudiera representarse.<br><br>De modo que hice algo inusual en la industria de las perfumería: crear una fragancia que no apelase a la belleza exterior, el atractivo o la sensualidad, sino que invitase al individuo a aceptar el vacío interior dentro de sí para llevarlo impregnado en su propia piel a través de los matices de este aroma.<br><br>Vacuum no es solo un perfume; es un estilo de vida. Es abrazar el nudo de vacuidad de cada uno para evitar que nos consuma.",
+    "detallesExtra": "Software: Cinema4D, Redshift & Photoshop"
+  }
+]

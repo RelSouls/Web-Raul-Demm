@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang=”es”>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raúl Demm | Diseño & Escritura</title>
+
+    <!-- Favicón = icono de la pestaña del navegador -->
+    <link rel="icon" href="assets/img/Favicón.svg">
+
+    <!-- Traemos la hoja de estilos style.css -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/fs-menu.css">
+    <link rel="stylesheet" href="assets/css/change-mode.css">
+
+    <!-- Hoja de iconos de Bootstrap -->
+   <link rel="stylesheet" href="https://cloudflare.com">
+
+    <!-- Traemos nuestras Google Fonts -->
+    <!-- ALeo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Nunito Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- REJILLA ESTRUCTURA -->
+    <!-- <div class="grid">
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>    
+    </div> -->
+
+    <!-- RESTO DEL CUERPO -->
+    <header class="capa-top flex-row main-container">
+        <div class="flex-row center">
+            <div id="logo">
+                <img class="img-desktop" src="assets/img/Favicón.svg">
+                <img class="img-mobile" src="assets/img/Favicón.svg">
+            </div>
+            <!--Cambio de modo LIGHT / DARK -->
+            <!-- <input type="checkbox" id="dark-mode-toggle"/>
+            <label for="dark-mode-toggle" class="toggle"></label> -->
+        </div>
+
+        <nav>
+            <ul id="menu">
+                <li><a href="#hero-section">Inicio</a></li>
+                <!-- <li>|</li> -->
+                <li><a href="#sobremi">Sobre mí</a></li>
+                <!-- <li>|</li> -->
+                <li><a href="#proyectos">Proyectos</a></li>
+                <!-- <li>|</li> -->
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+
+
+           <!-- HAMBURGER -->
+            <button class="menu-toggle" id="menu-toggle">
+                <div class="menu-bar" data-position="top"></div>
+                <div class="menu-bar" data-position="bottom"></div>      
+            </button>
+        </nav>
+        <!-- ////////////////////////////////////////////////// -->
+
+    </header>
+
+    <!-- ///////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- COMIENZA EL FULLSCREEN MENU -->
+    <div id="fsmenu-left" class="flex-column padding-big">
+        <ul class="flex-column gap-xl mobile-menu">
+            <li><a href="#hero-section">Inicio</a></li>
+            <li><a href="#sobremi">Sobre mí</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </div>
+    <!-- ///////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <section id="hero-section" class="center flex-column">
+        <img class="hero-section-logo img-desktop capa-2" src="assets/img/Logo.svg">
+        <img class="hero-section-logo img-mobile capa-2" src="assets/img/LogoCorto.svg">
+        
+        <img class="hero-isotipo capa-1" src="assets/img/Isotipo trazado rojo.svg" alt="Isotipo Trazado">
+
+        <div class="capa-1 flex-column center">
+            <!-- Palabras -->
+            <!-- <div class="contenedor-lista subrayado-animado">
+                <ul id="lista-carrusel">
+                    <li class="activo">Diseño de marca</li>
+                    <li>Animación</li>
+                    <li>Edición de vídeo</li>
+                    <li>Diseño 3D</li>
+                    <li>Ilustración</li>
+                    <li>Maquetación</li>
+                    <li>Edición de imágenes</li>
+                    <li>UX/UI</li>
+                    <li>Diseño sonoro</li>
+                </ul>
+            </div> -->
+
+            <!-- Botones -->
+            <!-- <div class="cta-button center">
+                <a class="cta-primary" target="_blank" href="https://relsouls.github.io/design">Portfolio Diseño</a>
+                <a class="cta-secondary" href="#">Descubrir Novelas</a>
+            </div> -->
+        </div>
+
+        <div class="hero-section-background capa-bottom">
+            <div id="hero-carousel-container"></div>
+            <div class="overlay flex-row center">  
+            </div>
+        </div>
+    </section>
+    
+    <section class="slogan-section">
+        <p class="slogan-text">
+            <i>No hay <span class="highlight">historia</span> sin diseño; ni <span class="highlight">diseño</span> sin historia.</i>
+        </p>
+    </section>
+
+    <section id="about-section" class="capa-2 flex-row gap-l">
+        <div class="about-col-title">
+            <p id="sobremi" class="title-small">SOBRE MÍ</p>
+        </div>
+        <img class="about-pluma" src="assets/img/pluma.svg" alt="Pluma decorativa">
+        <div class="about-col-text">
+            <p class="font-text"> He aquí la pregunta habitual: ¿por dónde empezar?
+            <br><br>Algunos dicen que los comienzos son complicados; ignoran que nada nace del vacío: todo existe como consecuencia. Otros, pretenden mostrar un <i>todo</i> como una imagen perfecta, y no como el resultado de una travesía. Enarbolan una bandera pulcra de impolutos remaches, obviando que es la bandera hajada aquella que conserva mayor historia.
+            <br><br>Eso es narrar. Abrazar un resultado y hondearlo como estandarte. Oler la tela vieja y sentir las puntadas deshilachadas. Todo lo que tenga un pasado es una historia; y todo, hasta la más novedosa de las realidades, nace de algo.
+            <br><br>Amo las historias. Desde que tengo uso de razón. Amo contarlas y escucharlas, amo empaparme de ellas y comprender la verdadera naturaleza de sus mundos. Por eso, me dedico a crearlos: microcosmos de reglas y entidades que flotan en un infinito antes de forjar un sentido. La canción de lo abstracto tomando una manifestación concreta. La creación. La transmisión de una idea, emoción o identidad. Es lo que soy. Me dedico a <b>diseñar narrativas</b>, y los videojuegos son mi mayor fuente de inspiración. Mis adalides. Tal vez un enfoque inusual en diseñadores y narradores, pero nutritivo en igual medida.
+            <br><br>Soy <b>Raúl de Miguel Martín</b> y en esta página encontrarás todo lo que necesitas saber sobre mi legado. 
+        </div>
+        
+    </section>
+
+    <!-- Listado servicios -->
+    <section class="services-section capa-2 flex-row gap-l">
+        <!-- Item 1 -->
+        <div class="col-3 service-item">
+            <p class="title-small">GRÁFICO</p>
+            <ul class="font-text">
+                <li>Ilustración</li>
+                <li>Edición de imágenes</li>
+                <li>Diseño 3D</li>
+            </ul>
+        </div>
+        <!-- Item 2 -->
+        <div class="col-3 service-item">
+            <p class="title-small">IDENTIDAD</p>
+            <ul class="font-text">
+                <li>Diseño de marca</li>
+                <li>Maquetación</li>
+                <li>UX/UI</li>
+            </ul>
+        </div>
+        <!-- Item 3 -->
+        <div class="col-3 service-item">
+            <p class="title-small">MOTION</p>
+            <ul class="font-text">
+                <li>Animación</li>
+                <li>Edición de vídeo</li>
+                <li>Diseño sonoro</li>
+            </ul>
+        </div>
+        <!-- Item 4 -->
+        <div class="col-3 service-item">
+            <p class="title-small">NARRATIVA</p>
+            <ul class="font-text">
+                <li>Novelas</li>
+                <li>Relatos</li>
+                <li>Folclore de fantasía</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Franja de sección: PROYECTOS -->
+    <section id="proyectos" class="projects-header-section">
+        <div class="projects-title-container">
+            <h2 class="projects-main-title">PROYECTOS</h2>
+        </div>
+        
+        <!-- Selector de dimensiones (Diseño / Escritura) -->
+        <div class="projects-filter-bar">
+            <button class="filter-option active" data-filter="diseno">Diseño</button>
+            <button class="filter-option" data-filter="escritura">Escritura</button>
+        </div>
+    </section>
+
+    <!-- Listado proyectos -->
+    <div class="items">
+        <!--------PORTFOLIO REVISITADO----- -->
+        <!-- Dentro de tu index.html, donde van los proyectos -->
+        <section class="portfolio-grid">
+            <!-- Aquí es donde el script pintará las miniaturas automáticamente -->
+            <div id="contenedor-proyectos" class="grid-proyectos"></div>
+        </section>
+        
+        <!-----------------------------------------------
+        -------------------------------------------------
+        ------------------------------------------------>
+        
+
+    </div>
+    <!-- SECCIÓN CONTACTO -->
+    <section id="contacto" class="contacto-section">
+        <div class="contacto-header">
+            <h2 class="contacto-main-title">CONTACTO</h2>
+        </div>
+        
+        <div class="contenedor-imagen-inferior">
+            <!-- Imagen usada como patrón de fondo -->
+            <img src="assets/img/Patrón Calderón.svg" alt="Imagen Contacto" class="imagen-ajustable">
+            
+            <!-- Contenido superpuesto sobre el patrón -->
+            <div class="contacto-overlay-content">
+                
+                <!-- Recuadro del formulario -->
+                <div class="contacto-form-container">
+                    <form action="https://formspree.io/f/rel.miguel77@gmail.com" method="POST" class="contacto-form">
+                        <div class="form-group">
+                            <input type="text" name="nombre" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Tu correo electrónico" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="mensaje" placeholder="Escribe tu mensaje..." rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="cta-primary-form">Enviar mensaje</button>
+                    </form>
+                </div>
+
+                <!-- Datos de contacto en 3 columnas -->
+                <div class="contacto-datos-grid">
+                    <div class="contacto-col">
+                        <p class="title-small">CORREO</p>
+                        <p class="font-text">rel.miguel77@gmail.com</p>
+                    </div>
+                    <div class="contacto-col">
+                        <p class="title-small">TELÉFONO</p>
+                        <p class="font-text">+34 615 94 17 33</p>
+                    </div>
+                    <div class="contacto-col">
+                        <p class="title-small">LOCALIZACIÓN</p>
+                        <p class="font-text">Madrid, España</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    
+
+
+    <!-- -------------------SCRIPTS------------------ -->
+    <!-- CARROUSEL PALABRAS -->
+    <script>
+        const items = document.querySelectorAll('#lista-carrusel li');
+        let index = 0;
+
+        function cambiarElemento() {
+            const itemActual = items[index];
+            
+            // 1. Enviar el elemento actual hacia la izquierda
+            itemActual.classList.remove('activo');
+            itemActual.classList.add('salida');
+
+            // 2. Calcular el índice del siguiente elemento
+            index = (index + 1) % items.length;
+            const siguienteItem = items[index];
+
+            // 3. Limpiar su estado de salida previo (por si ya dio la vuelta completa)
+            siguienteItem.classList.remove('salida');
+            
+            // 4. Hacer que entre desde la derecha
+            siguienteItem.classList.add('activo');
+
+            // Limpieza: Quita la clase 'salida' después de que termine su animación
+            setTimeout(() => {
+                itemActual.classList.remove('salida');
+            }, 500); // 500ms coincide con el tiempo del transition en CSS
+        }
+
+        // Ejecuta el cambio cada 2 segundos
+        setInterval(cambiarElemento, 1500);
+    </script>
+
+    <!-- CARROUSEL IMÁGENES -->
+    <script>
+        document.addEventListener("DOMContentLoaded", async () => {
+            const carouselContainer = document.getElementById('hero-carousel-container');
+            const heroSection = document.getElementById('hero-section');
+            if (!carouselContainer || !heroSection) return;
+
+            let proyectoActualId = null; // Variable para almacenar el ID del proyecto activo
+
+            try {
+                const respuesta = await fetch('projects.json');
+                const proyectos = await respuesta.json();
+
+                // Filtramos proyectos que tengan miniatura e ID
+                const slidesData = proyectos.map(p => ({
+                    img: p.imagenMiniatura,
+                    id: p.id
+                })).filter(p => p.img);
+
+                if (slidesData.length === 0) return;
+
+                // Creamos los elementos <img>
+                slidesData.forEach((data, index) => {
+                    const img = document.createElement('img');
+                    img.src = data.img;
+                    img.className = 'hero-carousel-img';
+                    img.dataset.projectId = data.id; // Guardamos el ID en un atributo de datos
+                    if (index === 0) {
+                        img.classList.add('activo');
+                        proyectoActualId = data.id; // Asignamos el ID inicial
+                    }
+                    carouselContainer.appendChild(img);
+                });
+
+                const slides = carouselContainer.querySelectorAll('.hero-carousel-img');
+                let currentIndex = 0;
+
+                function cambiarFondoHero() {
+                    const actual = slides[currentIndex];
+                    
+                    actual.classList.remove('activo');
+                    actual.classList.add('salida');
+
+                    currentIndex = (currentIndex + 1) % slides.length;
+                    const siguiente = slides[currentIndex];
+
+                    siguiente.classList.remove('salida');
+                    siguiente.classList.add('activo');
+
+                    // Actualizamos el ID del proyecto activo para el enlace
+                    proyectoActualId = siguiente.dataset.projectId;
+
+                    setTimeout(() => {
+                        actual.classList.remove('salida');
+                    }, 800);
+                }
+
+                setInterval(cambiarFondoHero, 4000);
+
+                // Evento de clic en todo el hero-section para redirigir al proyecto actual
+                heroSection.addEventListener('click', (e) => {
+                    // Evitamos que el enlace funcione si se hace clic explícitamente en los botones o menús internos
+                    if (e.target.closest('.cta-button') || e.target.closest('header')) return;
+                    
+                    if (proyectoActualId) {
+                        window.location.href = `project.html?id=${proyectoActualId}`;
+                    }
+                });
+
+            } catch (error) {
+                console.error("Error al cargar las imágenes para el carrusel del hero:", error);
+            }
+        });
+    </script>
+
+    <script src="assets/js/hamburger.js"></script>
+
+    <!-- OPACIDAD DINÁMICA HEADER -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        const header = document.querySelector("header");
+        if (!header) return;
+
+        // Configuración de variables (fáciles de modificar)
+        const maxScroll = 320; // Distancia en píxeles donde se detiene la transición (equivalente a 10rem si 1rem=16px)
+        const minOpacity = 0.5; // Opacidad mínima a la que se detendrá (70%)
+
+        window.addEventListener("scroll", () => {
+            const scrollY = window.scrollY;
+
+            // Calculamos la opacidad de forma proporcional entre 1 y minOpacity
+            let opacity = 1 - (scrollY / maxScroll) * (1 - minOpacity);
+
+            // Limitamos el valor para que no baje de minOpacity ni suba de 1
+            if (opacity < minOpacity) {
+                opacity = minOpacity;
+            } else if (opacity > 1) {
+                opacity = 1;
+            }
+
+            // Aplicamos el color de fondo usando rgba con el color oscuro y la opacidad calculada
+            // Nota: Asegúrate de cambiar los valores RGB si tu --dark-color es distinto de #200005 (RGB: 32, 0, 5)
+            header.style.backgroundColor = `rgba(32, 0, 5, ${opacity})`;
+        });
+    });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        const filterButtons = document.querySelectorAll(".filter-option");
+
+        filterButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                // Elimina la clase activa de todos y se la pone al clicado
+                filterButtons.framework = filterButtons.forEach(btn => btn.classList.remove("active"));
+                button.classList.add("active");
+
+                // Aquí preparas el terreno para que, en el futuro, cargues el JSON 
+                // correspondiente según el atributo `data-filter` (ej. "diseno" o "escritura")
+                const selectedCategory = button.getAttribute("data-filter");
+                console.log(`Cambiado a la vista de: ${selectedCategory}`);
+            });
+        });
+    });
+    </script>
+    <!-- CARGAR PROYECTOS | ORGANIZACIÓN TETRIS-->
+    <script>
+    async function cargarContenidoSeccion(categoria) {
+        const contenedor = document.getElementById('contenedor-proyectos');
+        
+        // Transición de salida suave del contenedor actual
+        contenedor.style.opacity = 0;
+        contenedor.style.transform = 'translateY(10px)';
+        contenedor.style.transition = 'opacity 0.25s ease, transform 0.25s ease';
+
+        setTimeout(async () => {
+            contenedor.innerHTML = ""; 
+
+            try {
+                let archivoJson = 'projects.json';
+                let paginaDetalle = 'project.html';
+
+                if (categoria === 'escritura') {
+                    archivoJson = 'writings.json';
+                    paginaDetalle = 'writing.html';
+                }
+
+                const respuesta = await fetch(archivoJson);
+                const datos = await respuesta.json();
+                
+                // Procesamiento unificado de dimensiones (Tetris para ambos)
+                let poolProyectos = datos.map(p => ({
+                    ...p,
+                    dim: p.dimension || "1x1",
+                    cols: p.dimension === "2x1" || p.dimension === "2x2" ? 2 : 1,
+                    rows: p.dimension === "1x2" || p.dimension === "2x2" ? 2 : 1
+                }));
+
+                const numCols = 3;
+                let gridMatrix = [];
+
+                function asegurarFila(fila) {
+                    while (gridMatrix.length <= fila) {
+                        gridMatrix.push(new Array(numCols).fill(false));
+                    }
+                }
+
+                function encontrarEspacio(colsItem, rowsItem) {
+                    for (let r = 0; r < gridMatrix.length + 2; r++) {
+                        asegurarFila(r + rowsItem - 1);
+                        for (let c = 0; c <= numCols - colsItem; c++) {
+                            let cabe = true;
+                            for (let dr = 0; dr < rowsItem; dr++) {
+                                for (let dc = 0; dc < colsItem; dc++) {
+                                    if (gridMatrix[r + dr][c + dc]) {
+                                        cabe = false;
+                                        break;
+                                    }
+                                }
+                                if (!cabe) break;
+                            }
+                            if (cabe) return { r, c };
+                        }
+                    }
+                    return { r: gridMatrix.length, c: 0 };
+                }
+
+                function ocuparEspacio(r, c, colsItem, rowsItem) {
+                    for (let dr = 0; dr < rowsItem; dr++) {
+                        asegurarFila(r + dr);
+                        for (let dc = 0; dc < colsItem; dc++) {
+                            gridMatrix[r + dr][c + dc] = true;
+                        }
+                    }
+                }
+
+                let proyectosOrdenados = [];
+                if (poolProyectos.length > 0) {
+                    let primero = poolProyectos.shift();
+                    ocuparEspacio(0, 0, primero.cols, primero.rows);
+                    proyectosOrdenados.push({ ...primero, gridRow: `span ${primero.rows}`, gridCol: `span ${primero.cols}` });
+                }
+
+                while (poolProyectos.length > 0) {
+                    let mejorCandidatoIndex = -1;
+                    let mejorPos = null;
+
+                    for (let i = 0; i < poolProyectos.length; i++) {
+                        let p = poolProyectos[i];
+                        let pos = encontrarEspacio(p.cols, p.rows);
+                        if (!mejorPos || pos.r < mejorPos.r || (pos.r === mejorPos.r && pos.c < mejorPos.c)) {
+                            mejorPos = pos;
+                            mejorCandidatoIndex = i;
+                        }
+                    }
+
+                    let seleccionado = poolProyectos.splice(mejorCandidatoIndex, 1)[0];
+                    ocuparEspacio(mejorPos.r, mejorPos.c, seleccionado.cols, seleccionado.rows);
+                    proyectosOrdenados.push({
+                        ...seleccionado,
+                        gridRow: `span ${seleccionado.rows}`,
+                        gridCol: `span ${seleccionado.cols}`
+                    });
+                }
+
+                proyectosOrdenados.forEach((item, index) => {
+                    // Contenedor externo que se encarga de la animación y ahora también lleva la categoría
+                    const wrapper = document.createElement('div');
+                    wrapper.className = `grid-item-${item.dim} ${categoria}`; // <-- Añadimos ${categoria} aquí
+                    wrapper.style.gridColumn = item.gridCol;
+                    wrapper.style.gridRow = item.gridRow;
+                    wrapper.style.animationDelay = `${index * 0.2}s`;
+                    wrapper.classList.add('anim-wrapper');
+
+                    // La tarjeta real que contendrá los estilos y el hover completo
+                    const tarjeta = document.createElement('a');
+                    tarjeta.href = `${paginaDetalle}?id=${item.id}`;
+                    tarjeta.className = 'tarjeta-proyecto';
+
+                    // Estructura interna según la categoría
+                    if (categoria === 'escritura') {
+                        tarjeta.innerHTML = `
+                            <div class="tarjeta-imagen">
+                                <img src="${item.imagenMiniatura}" alt="${item.titulo}" class="img-degradado">
+                                <div class="tarjeta-overlay"></div>
+                                <div class="tarjeta-info">
+                                    <h3 class="tarjeta-titulo">${item.titulo}</h3>
+                                    <span class="tarjeta-categoria">${item.genero || 'Escritura'}</span>  
+                                </div>
+                            </div>
+                        `;
+                    } else {
+                        tarjeta.innerHTML = `
+                            <div class="tarjeta-imagen">
+                                <img src="${item.imagenMiniatura}" alt="${item.titulo}" class="img-degradado">
+                                <img src="${item.imagenColor}" alt="${item.titulo}" class="img-color">
+                                <div class="tarjeta-overlay"></div>
+                                <div class="tarjeta-info">
+                                    <h3 class="tarjeta-titulo">${item.titulo}</h3>
+                                    <span class="tarjeta-categoria">${item.categoria}</span>  
+                                </div>
+                            </div>
+                        `;
+                    }
+                    
+                    wrapper.appendChild(tarjeta);
+                    contenedor.appendChild(wrapper);
+                });
+
+                // Restaurar contenedor con fundido de entrada limpio
+                contenedor.style.opacity = 1;
+                contenedor.style.transform = 'translateY(0)';
+
+            } catch (error) {
+                console.error("Error al cargar los contenidos:", error);
+                contenedor.innerHTML = "<p style='color: var(--light-color); text-align: center; grid-column: span 3;'>Error al cargar los elementos.</p>";
+                contenedor.style.opacity = 1;
+                contenedor.style.transform = 'translateY(0)';
+            }
+        }, 200);
+    }
+
+    // Configuración de clics en los botones de filtro
+    document.addEventListener("DOMContentLoaded", () => {
+        const filterButtons = document.querySelectorAll(".filter-option");
+
+        // Leer el parámetro 'section' de la URL (por defecto 'diseno' si no existe)
+        const urlParams = new URLSearchParams(window.location.search);
+        const initialCategory = urlParams.get('section') || 'diseno';
+
+        // Activar el botón correspondiente al filtro inicial y cargar su contenido
+        filterButtons.forEach(btn => {
+            if (btn.getAttribute("data-filter") === initialCategory) {
+                btn.classList.add("active");
+            } else {
+                btn.classList.remove("active");
+            }
+        });
+
+        cargarContenidoSeccion(initialCategory);
+
+        // Gestión de clics en los botones de filtro
+        filterButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                filterButtons.forEach(btn => btn.classList.remove("active"));
+                button.classList.add("active");
+
+                const selectedCategory = button.getAttribute("data-filter");
+                cargarContenidoSeccion(selectedCategory);
+
+                // Actualizar opcionalmente la URL sin recargar para reflejar el estado actual
+                const newUrl = new URL(window.location);
+                newUrl.searchParams.set('section', selectedCategory);
+                window.history.replaceState({}, '', newUrl);
+            });
+        });
+    });
+    </script>
+</body>
+</html>

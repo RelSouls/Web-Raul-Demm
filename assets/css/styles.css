@@ -1,0 +1,1580 @@
+/* HOJA DE ESTILOS CSS */
+/* CSS Resets */
+body{
+    padding: 0px;
+    margin: 0px;
+    color:var(--primary-color);
+    background-color: var(--light-color);
+}
+
+ul{
+    list-style-type: none;
+    margin-left:-40px;
+}
+
+
+/* Reset del modelo de caja */
+*, *::before, *::after{
+    box-sizing:border-box;
+}
+
+/* ----------------Variables-------------------- */
+:root{
+    --heading-font: "Nunito Sans", sans-serif;
+    --text-font: "Baskervville", serif;
+
+    --primary-color: #970016;
+    --primary-color-light:#b6001b;
+    --primary-color-dark: #870014;
+    --dark-color:#200005;
+    --dark-color-light:#310007;
+    --light-color: #ffffff;
+    --light-color-transparent: rgb(247, 247, 242, 0.6);
+
+    /* Columnas */
+    --gap: 1.5rem;
+    --one-col: calc((100% - (var(--gap) * 11)) / 12);
+}
+
+/* ----------------Tipografía------------------- */
+/* Aleo font family -Texto*/
+
+.baskervville-text {
+  font-family: "Baskervville", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Nunito Sans font family -Títulos */
+.nunito-sans-text {
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100,
+    "YTLC" 500;
+}
+
+/* Titling */
+h1, h2, h3, h4, h5, h6{
+    font-family: var(--heading-font);
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 100%;
+    margin: 0;
+    letter-spacing: 0.5rem;
+}
+
+.font-heading{
+    font-family: var(--heading-font);
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 100%;
+    margin: 0;
+    letter-spacing: 0.5rem;
+}
+
+.font-text{
+    font-family: "Baskervville", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* -------------------Colores----------------------- */
+.light{
+    color: var(--primary-color);
+}
+
+.dark{
+    color: var(--light-color);
+}
+
+
+/* ---------------Display----------------- */
+
+.flex-column{
+    display:flex;
+    flex-direction: column;
+}
+
+.flex-row{
+    display:flex;
+    flex-direction: row;
+}
+
+.flex-align-end{
+    justify-content: end;
+}
+
+.vertical-center{
+    align-items: center;
+}
+
+.center{
+    align-items: center;
+    justify-content: center;
+}
+
+.wrap{
+    flex-wrap: wrap;
+}
+
+/* ---------------Capas----------------- */
+.capa-bottom{
+    z-index: 0;
+}
+
+.capa-1{
+    z-index: 1;
+}
+
+.capa-2{
+    z-index: 2;
+}
+
+.capa-3{
+    z-index: 3;
+}
+
+.capa-4{
+    z-index: 4;
+}
+
+.capa-5{
+    z-index: 5;
+}
+
+.capa-top{
+    z-index: 999;
+}
+
+/* ---------------Espaciados------------*/
+.gap-xs{
+    gap: 1rem;
+}
+
+.gap-s{
+    gap: 1.5rem;
+}
+
+.gap-m{
+    gap: 2rem;
+}
+
+.gap-l{
+    gap: 2.5rem;
+}
+
+.gap-xl{
+    gap: 3rem;
+}
+
+
+.padding-xs{
+    padding: 0.5rem;
+}
+
+.padding-s{
+    padding: 1rem;
+}
+
+.padding-r{
+    padding: 1.5rem;
+}
+
+.padding-m{
+    padding: 2rem;
+}
+
+.padding-l{
+    padding: 2.5rem;
+}
+
+.padding-xl{
+    padding: 3rem;
+}
+
+
+/* ------------------Botones---------------- */
+.cta-primary{
+    padding: 1rem 2rem;
+    color: var(--light-color);
+    border-bottom: 1px solid var(--light-color);
+    border-left: 1px solid var(--light-color);
+    /* border-radius: 2rem; */
+}
+
+.cta-secondary{
+    padding: 1rem 2rem;
+    /* background-color: var(transparent); */
+    color: var(--light-color-transparent);
+    border-bottom: 1px solid var(--light-color);
+    /* border-radius: 2rem; */
+}
+
+.cta-button{
+    margin: 0rem;
+    display: flex;
+    flex-direction: row;
+    font-weight: 400;
+}
+        .cta-button a{
+            text-decoration: none;
+            text-transform: lowercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.8rem;
+            /*padding: 16px 48px; arriba y abajo, derecha e izquierda */
+            padding: 1rem 3rem 1rem 3rem; /* arriba, derecha, abajo, izquierda */
+            /* border-bottom: 1px solid #f7f7f2; */
+            transition: all 0.3s ease-in-out; /* Animación suave */
+        }
+
+        .cta-button a:hover{
+            color: var(--light-color);
+            background-color: #701e1ead;
+            border-bottom: 1px solid #f7f7f2;
+            padding: 1rem 10rem 1rem 10rem;
+            letter-spacing: 1rem;
+        }
+
+
+/* ----------Enlaces------- */
+html {
+  scroll-behavior: smooth;
+}
+
+:target {
+  scroll-margin-top: 10rem;
+}
+
+/* ------------------------------------------------- */
+/* -------------------CSS Main---------------------- */
+/* ------------------------------------------------- */
+/* -------------Contenedores--------------- */
+.main-container{
+    width: 100%;
+    padding: 0.2rem 0rem 0rem 3rem;
+}
+
+.sticky-box{
+    position: sticky!important;
+    top: 0;
+}
+
+.relative{
+    position: relative;
+    top: 0;
+}
+
+.absolute{
+    position: absolute;
+    top: 0;
+}
+
+body{
+    font-family: var(--text-font);
+    font-weight: 300;
+    overflow-x: hidden;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top:0;
+    left:0;
+    background-color: var(--dark-color);
+    /* width: 100vw; */ /* vw = viewport width */
+    height: auto; /* vh = viewport height */
+    padding: 0rem;
+    /* Flexbox */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.img-mobile{
+    display:none;
+}
+
+#logo{
+    width: 2rem;
+    margin: 1rem 0rem 1rem 0rem;
+    padding-bottom: 0rem;
+    filter: invert(1);
+}
+
+#menu{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+
+    #menu a{
+        color: var(--light-color);
+        text-decoration: none;
+        text-transform: lowercase;
+        font-size: 0.9rem;
+        letter-spacing: 0.8rem;
+        /*padding: 16px 48px; arriba y abajo, derecha e izquierda */
+        padding: 80px 40px 16px 40px; /* arriba, derecha, abajo, izquierda */
+        border-bottom: 1px solid var(--light-color);
+        transition: all 0.3s ease-in-out; /* Animación suave */
+    }
+
+    #menu a:hover{
+        color: var(--light-color);
+        background-color: var(--primary-color);
+        border-bottom: 1px solid var(--light-color);
+        padding-bottom: 3rem;
+        font-size: 1rem;
+        letter-spacing: 1rem;
+    }
+
+
+
+#hero-section{
+    position: relative;
+    /* background-image: url(../img/home-hero-background.webp); */
+    background-color: var(--primary-color);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    /* aspect-ratio: 21/9; */
+    width: 100%;
+    height: 80dvh;
+    padding-top: 0rem;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+/* Estilos para el isotipo trazado */
+.hero-isotipo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 200%;
+    opacity: 100%;
+    width: auto;
+    object-fit: cover;
+    pointer-events: none; /* Evita que bloquee los clics del carrusel o enlaces */
+}
+
+
+#hero-section h1{
+    /* font-weight: 700; */
+    font-size: 3rem;
+    color:var(--accent-color);
+    margin: 0 20rem;
+    padding: 1rem 0rem;
+    transition: all 1s ease-in-out; /* Animación suave */
+}
+
+#hero-section h1:hover{
+    font-size: 5rem;  
+    font-weight: 950;
+}
+
+.pre-title{
+    font-size: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.8rem;
+    margin: 0rem 15rem;
+    padding: 7rem 0rem 1rem 0rem;
+    /* color:#ebd0b2; */
+    color: var(--accent-color);
+    transition: all 1s ease-in-out; /* Animación suave */
+}
+
+.pre-title:hover{
+    letter-spacing: 1.5rem;
+}
+
+.post-title{
+    font-size: 1rem;
+    text-align: center;
+    color: var(--light-color);
+    padding: 0rem 3rem;
+    font-weight: 300;
+}
+
+/* LISTA PALABRAS */
+        .contenedor-lista {
+            color: var(--light-color);
+            font-family: var(--text-font);
+            font-size: 1.5vw;
+            font-weight: 150;
+            letter-spacing: 0.5rem;
+            text-align: center;
+            position: relative;
+            width: 35rem;
+            margin: 3rem;
+            margin-bottom: 7rem;
+        }
+
+        .contenedor-lista ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* 1. ESTADO INICIAL (Fuera de la pantalla a la derecha) */
+        #lista-carrusel li {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0;
+            transform: translateX(40%);
+            transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+        }
+
+        /* 2. ESTADO ACTIVO (En el centro visible) */
+        #lista-carrusel li.activo {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* 3. ESTADO SALIDA (Fuera de la pantalla a la izquierda) */
+        #lista-carrusel li.salida {
+            opacity: 0;
+            transform: translateX(-40%);
+        }
+
+    .subrayado-animado {
+        text-decoration: none; /* Quita el subrayado por defecto */
+        position: relative;    /* Necesario para posicionar la línea */
+    }
+
+    /* Crear la línea oculta usando un pseudoelemento */
+    .subrayado-animado::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px; /* Grosor de la línea */
+        bottom: -2.5rem; /* Separación del texto */
+        left: 0;
+        background-color: var(--light-color); /* Color de la línea */
+        
+        /* El truco del escalado */
+        transform: scaleX(0); /* Empieza con longitud cero (invisible) */
+        transition: transform 0.5s ease-in-out; /* Velocidad de la animación */
+    }
+
+    /* Efecto al pasar el cursor */
+    .subrayado-animado:hover::after {
+        transform: scaleX(1); /* Se expande a toda su longitud */
+    }
+
+/* OVERLAY */
+.hero-section-background{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+.hero-section-logo{
+    position: absolute;
+    bottom: 0;          
+    left: 0; 
+    width: 90%;
+    filter: invert(1);
+    margin-bottom: -5px;   
+}
+
+.overlay{
+    position: absolute;
+    margin-top: 0rem;
+    width: 100%;
+    height: 100%;
+    background: #E94949;
+    background: linear-gradient(0deg, var(--dark-color) 0%, var(--light-color) 100%);
+    mix-blend-mode: multiply; /* Modo de fusión: multiplicar */
+}
+
+.overlay img{
+    width: 70%;
+    height: 70%;
+    opacity: 15%;
+}
+
+/* ---------CARROUSEL----------- */
+#hero-carousel-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Detrás del overlay y contenido */
+}
+
+.hero-carousel-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    /* opacity: 0; */
+    visibility: hidden;
+    transform: translateX(100%);
+    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out, visibility 0.8s ease-in-out;
+}
+
+.hero-carousel-img.activo {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.hero-carousel-img.salida {
+    /* opacity: 0; */
+    visibility: hidden;
+    transform: translateX(-100%);
+}
+
+.hero-section-background .overlay {
+    z-index: 1;
+    pointer-events: none; /* Para que no bloquee clics si hace falta */
+}
+/* ----------------------------- */
+
+.dot-transition{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    overflow: hidden;
+    margin-top: -1px;
+}
+
+.dot-transition img{
+    width: 35vw;
+}
+
+/* FIN OVERLAY */
+
+.slogan-section {
+    width: 100%;
+    min-height: 20vh;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light-color);
+}
+
+.slogan-text {
+    font-family: var(--heading-font);
+    font-size: 1.2rem; /* Tamaño más comedido y elegante */
+    font-weight: 200;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem; /* Espaciado más sutil */
+    color: var(--dark-color);
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.slogan-text .highlight {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+#about-section {
+    position: relative;
+    font-size: 1vw;
+    padding: 5rem 15rem 2rem 15rem;
+    align-items: flex-start;  /* Alinea la primera línea del título y el texto arriba */
+}
+
+.about-pluma {
+    position: absolute;
+    top: 0rem;
+    left: 12rem; 
+    width: 25%;
+    z-index: -1;
+    opacity: 15%;
+    pointer-events: none;
+}
+
+/* El título ocupa 1 de las 3 columnas (aproximadamente un 25-30%) */
+.about-col-title {
+    width: 30%;
+}
+
+/* El texto ocupa las otras 2 columnas restantes (aproximadamente un 70%) */
+.about-col-text {
+    width: 70%;
+    color: var(--dark-color);
+}
+
+.services-section {
+    font-size: 1vw;
+    padding: 2rem 5rem 4rem 5rem;
+    align-items: flex-start;
+}
+
+.service-item {
+    margin: 0;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.service-item ul {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+    margin-top: 1rem;
+}
+
+.service-item li {
+    margin-bottom: 0.5rem;
+}
+
+/* -------------HEADING PROYECTOS------------ */
+/* ------------------------------------------- */
+/* Franja elegante a ancho completo */
+.projects-header-section {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: 4rem 0 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* Titular con espaciado de letras elegante */
+.projects-main-title {
+    font-family: var(--heading-font);
+    font-size: 3.5rem;
+    font-weight: 100;
+    letter-spacing: 3rem;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 1s ease-in-out;
+    /* El truco: compensar el último tracking que sobra a la derecha metiéndolo también como margen izquierdo */
+    padding-left: 3rem;
+}
+.projects-main-title:hover {
+    letter-spacing: 4rem;
+    padding-left: 4rem;
+}
+
+/* Barra contenedora del selector */
+.projects-filter-bar {
+    display: flex;
+    gap: 0rem;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos base de los botones del selector */
+.filter-option {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--light-color);
+    color: var(--light-color);
+    font-family: inherit;
+    font-size: 1.25rem;
+    text-transform: lowercase;
+    text-align: center;
+    letter-spacing: 1rem;
+    cursor: pointer;
+    padding: 1rem 3rem;
+    position: relative;
+    display: inline-block;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    /* El truco: compensar el último tracking que sobra a la derecha metiéndolo también como margen izquierdo */
+    padding-left: 4rem;
+}
+
+/* Efecto Hover: cambio de fondo, aumento de tracking y padding (panning) */
+.filter-option:hover {
+    letter-spacing: 2rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
+    background-color: var(--primary-color-dark);
+    border-bottom: 1px solid var(--light-color);
+    /* El truco: compensar el último tracking que sobra a la derecha metiéndolo también como margen izquierdo */
+    padding-left: 8rem;
+}
+
+/* Opción activa por defecto */
+.filter-option.active {
+    font-family: var(--text-font);
+    font-weight: 700 !important;
+    letter-spacing: 2rem;
+    border-bottom: 1px solid var(--light-color);
+}
+
+/* Opción inactiva (sutilmente más tenue para marcar jerarquía) */
+.filter-option:not(.active) {
+    color: var(--light-color-transparent);
+}
+
+.filter-option:not(.active):hover {
+    color: var(--light-color);
+}
+
+/* --------------------------------------------------- */
+/* -------------PORTFOLIO REVISITADO-------------------*/
+/* --------------------------------------------------- */
+/* Contenedor principal de la rejilla de proyectos */
+#contenedor-proyectos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+    grid-auto-rows: 260px;
+}
+
+.portfolio-grid {
+    width: 100%;
+    max-width: 80vw; /* Puedes cambiar este valor (ej. 1000px, 1100px) según lo estrecho que lo quieras */
+    margin: 0 auto;
+}
+
+.grid-proyectos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 100%;
+}
+
+.tarjeta-proyecto {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+    background: rgba(36, 2, 2, 0.5);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
+
+.anim-wrapper {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUpCard 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.tarjeta-proyecto:hover {
+    transform: scale(1.03);
+}
+
+.tarjeta-imagen {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Llena el espacio asignado por el grid */
+    overflow: hidden;
+}
+
+/* Ambas imágenes se solapan en el contenedor */
+.tarjeta-imagen img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* 1. La imagen con tu mapa de degradado (Se ve por defecto) */
+.tarjeta-imagen .img-degradado {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* 2. La imagen a color (Oculta por defecto) */
+.tarjeta-imagen .img-color {
+  opacity: 0;
+  z-index: 2;
+}
+
+/* --- EFECTO HOVER USANDO TUS CLASES --- */
+.tarjeta-proyecto:hover .tarjeta-imagen .img-color {
+  opacity: 1;
+  /* Mantiene tu escala original de 1.05 */
+}
+
+/* .tarjeta-proyecto:hover .tarjeta-imagen .img-degradado {
+  opacity: 0;
+} */
+
+/* Capa exclusiva para el degradado oscuro (solo cambia la opacidad) */
+.tarjeta-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%; /* Altura de la franja degradada */
+    background: linear-gradient(to top, rgba(32, 0, 5, 0.95) 0%, rgba(32, 0, 5, 0.7) 60%, transparent 100%);
+    z-index: 3;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+/* Capa exclusiva para los textos (cambia opacidad y desplazamiento) */
+.tarjeta-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+    z-index: 4; /* Por encima del degradado */
+    opacity: 0;
+    line-height: 10px;
+    transform: translateX(25px); /* Desplazamiento inicial a la derecha */
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+/* Al hacer hover, activamos ambas transiciones por separado */
+.tarjeta-proyecto:hover .tarjeta-overlay {
+    opacity: 1; /* El fondo se limita a aparecer con fundido */
+}
+
+.tarjeta-proyecto:hover .tarjeta-info {
+    opacity: 1;
+    transform: translateX(0); /* Las letras se desplazan a su sitio y aparecen */
+}
+
+.tarjeta-categoria {
+    font-size: 0.8rem;
+    color: var(--light-color-transparent);
+    letter-spacing: 1px;
+}
+
+.tarjeta-titulo {
+    color: var(--light-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+/* GRID SPANS */
+/* 1x1: Una columna, una fila */
+.grid-item-1x1 {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+/* 2x1: Dos columnas de ancho, una fila de alto */
+.grid-item-2x1 {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+/* 1x2: Una columna de ancho, dos filas de alto */
+.grid-item-1x2 {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+/* 2x2: Dos columnas de ancho, dos filas de alto (¡Gran protagonismo!) */
+.grid-item-2x2 {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+.title-small{
+    font-family: var(--heading-font);
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 0.8rem;
+}
+
+.items{
+    margin: 2rem;
+}
+
+.item{
+    margin: 0 1rem;
+    padding: 0.5rem 0;
+    border-top: 1px solid var(--accent-color);
+}
+
+.portfolio-item{
+    overflow: hidden;
+    color: white;
+    border-radius: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.project-thumbnail{
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 3/2;
+}
+
+    .project-thumbnail img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .project-overlay{
+        background-color:rgba(26, 2, 4, 0.7);
+        width: 100%;
+        height: 100%;
+        /* mix-blend-mode: multiply; */
+        backdrop-filter: blur(3px);
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+    }
+
+    /* .project-info {
+        padding-left: 2rem;
+        transition: all 0.3s ease-in-out;
+    } */
+
+    .portfolio-item:hover{
+        transform: scale(1.05);
+        /* animation: pulse 0.2s ease forwards; */
+    }
+
+    .portfolio-item:hover .project-overlay{
+        opacity: 1;
+    }
+
+    .portfolio-item:hover .project-info{
+        /* padding-left: 1rem; */
+        animation: fadeInRight 0.3s ease forwards;
+    }
+
+    .portfolio-item:not(:hover) .project-info{
+        /* padding-left: 1rem; */
+        animation: reverseFadeInRight 0.3s ease forwards;
+    }
+
+    /* .portfolio-item:hover .project-thumbnail img{
+        transform: scale(1.05);
+    } */
+
+    .project-title{
+        margin: 0;
+        font-family: var(--heading-font);
+        font-weight: 100;
+    }
+
+    .project-description{
+        font-family: var(--text-font);
+        font-size: 0.75rem;
+        width: 75%;
+    }
+
+
+/* ==========================================
+   SECCIÓN DE CONTACTO (Unificada y sin conflictos)
+   ========================================== */
+#contacto {
+    width: 100%;
+    background-color: var(--dark-color);
+    margin: 7rem 0 0 0;
+}
+
+.contacto-section {
+    width: 100%;
+    background-color: var(--dark-color);
+}
+
+.contacto-header {
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+
+.contacto-main-title {
+    font-family: var(--heading-font);
+    font-size: 3rem;
+    font-weight: 100;
+    letter-spacing: 2rem;
+    margin: 0;
+    text-transform: uppercase;
+    padding-left: 2rem;
+
+    transition: all 1s ease-in-out;
+}
+
+.contacto-main-title:hover{
+    letter-spacing: 3rem;
+    padding-left: 3rem;
+}
+
+/* Contenedor principal de la imagen: una sola definición limpia con Flexbox */
+.contenedor-imagen-inferior {
+    position: relative;
+    width: 100%; 
+    min-height: 750px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0 auto; 
+    background-color: var(--dark-color-light); 
+}
+
+/* Imagen de fondo absoluta / patrón */
+.contenedor-imagen-inferior .imagen-ajustable {
+    position: absolute;
+    transform-origin: center center; 
+    top: -2rem;
+    left: -11.5rem;
+    object-fit: cover;
+    z-index: 1;
+
+    /* Controla el tamaño inicial desde aquí (ej. 100% del contenedor o más grande) */
+    width: 120%;        
+    height: auto;
+    opacity: 10%;
+    pointer-events: none;
+}
+
+/* Capa superior perfectamente centrada y con espacio equilibrado */
+.contacto-overlay-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    box-sizing: border-box;
+}
+
+/* Recuadro del formulario con padding simétrico */
+.contacto-form-container {
+    width: 100%;
+    background: var(--dark-color);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    padding: 3rem 2.5rem;
+    backdrop-filter: blur(6px);
+    box-sizing: border-box;
+}
+
+.contacto-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.contacto-form input,
+.contacto-form textarea {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    color: var(--light-color);
+    font-family: var(--text-font);
+    font-size: 1rem;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.contacto-form input:focus,
+.contacto-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color-light);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.contacto-form input::placeholder,
+.contacto-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Botón centrado con margen superior limpio */
+.cta-primary-form {
+    align-self: center;
+    width: 100%;
+    max-width: 280px;
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    border: none;
+    border-radius: 6px;
+    font-family: var(--heading-font);
+    text-transform: lowercase;
+    letter-spacing: 0.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.cta-primary-form:hover {
+    background-color: var(--primary-color-light);
+    transform: translateY(-2px);
+}
+
+/* Bloque de tres columnas con padding simétrico */
+.contacto-datos-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    text-align: center;
+    background: rgba(32, 0, 5, 0.82);
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-sizing: border-box;
+}
+
+.contacto-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.contacto-col p {
+    margin: 0;
+    color: var(--light-color);
+}
+
+.contacto-col a {
+    color: var(--light-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contacto-col a:hover {
+    color: var(--primary-color-light);
+    text-decoration: underline;
+}
+
+
+
+/* ==========================================
+   2. BOTÓN DE VOLVER (para ambas páginas detalle)
+   ========================================== */
+
+.btn-volver {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 2rem 0;
+  text-decoration: none;
+  color: var(--dark-color);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.btn-volver:hover {
+  color: var(--primary-color);
+  transform: translateX(-4px); /* Sutil efecto de movimiento hacia la izquierda */
+}
+
+
+
+/* -----------------Animaciones-------------- */
+@keyframes fadeInRight{
+    from{
+        opacity: 0;
+        transform: translateX(5rem);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes reverseFadeInRight{
+    from{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to{
+        opacity: 0;
+        transform: translateX(0.7rem);
+    }
+}
+
+@keyframes pulse{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.05);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInUpCard {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* *******************************************************/
+/* GRID **************************************************/
+/* *******************************************************/
+
+.grid{
+    pointer-events: none;
+    width: 100vw;
+    height: 100vh;
+    padding: 0 3rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 1.5rem;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+    .grid-item{
+        width: calc(100% / 12);
+        border-right: 1px dashed #1c0b104b;
+        border-left: 1px dashed #1c0b104b;
+    }
+
+.col-1  { width: var(--one-col); }
+.col-2  { width: calc((var(--one-col) * 2) + var(--gap)); }
+.col-3  { width: calc((var(--one-col) * 3) + (var(--gap) * 2)); }
+.col-4  { width: calc((var(--one-col) * 4) + (var(--gap) * 3)); }
+.col-5  { width: calc((var(--one-col) * 5) + (var(--gap) * 4)); }
+.col-6  { width: calc((var(--one-col) * 6) + (var(--gap) * 5)); }
+.col-7  { width: calc((var(--one-col) * 7) + (var(--gap) * 6)); }
+.col-8  { width: calc((var(--one-col) * 8) + (var(--gap) * 7)); }
+.col-9  { width: calc((var(--one-col) * 9) + (var(--gap) * 8)); }
+.col-10 { width: calc((var(--one-col) * 10) + (var(--gap) * 9)); }
+.col-11 { width: calc((var(--one-col) * 11) + (var(--gap) * 10)); }
+.col-12 { width: 100%; }
+
+
+
+
+/* --------------------Tamaños---------------------- */
+/* ----Tamaños MEDIA QUERIES---- */
+/* TV 1440px */
+@media screen and (max-width: 1440px){
+    .dot-transition img{
+        margin: -0.5px;
+    }
+} 
+
+/* Desktop 1280px */
+@media screen and (max-width: 1280px){
+    .dot-transition img{
+        margin: -0.5px;
+    }
+
+    .grid .grid-item{
+        width: calc(100% / 9);
+    }
+
+    .grid .grid-item:nth-child(n+10){
+        display: none;
+    }
+
+    .col-4 {
+        width: calc((100%/2) - var(--gap)/2);
+    }
+} 
+
+@media screen and (max-width: 1100px){
+    #menu a{
+        letter-spacing: 0.7rem;
+        padding: 72px 24px 16px 24px;
+    }
+}
+
+/* Tablet 1024px */
+@media screen and (max-width: 1024px){  
+    .cta-button{
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .cta-button a{
+        font-size: 2.5vw;
+    }
+
+    #menu a{
+        padding: 72px 32px 16px 32px;
+    }
+    
+    .pre-title{
+        font-size: 4vw;
+    }
+
+    .post-title{
+        font-size: 3vw;
+        padding: 3rem;
+    }
+
+    #hero-section h1{
+        font-size: 10vw;
+        margin: 4rem;
+    }
+
+    .contenedor-lista {
+        font-size: 3vw;
+    }
+
+    .dot-transition img{
+        width: 50vw;
+        margin: -1px;
+    }
+
+    #about-section {
+        font-size: 2vw;
+        padding: 3rem 2rem;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .about-col-title, .about-col-text {
+        width: 100%;
+    }
+    .services-section {
+        padding: 3rem 2rem;
+        flex-direction: column;
+        gap: 2rem;
+        font-size: 2vw;
+    }
+
+    .services-section .col-4 {
+        width: 100%;
+    }
+
+    .grid .grid-item{
+        width: calc(100% / 6);
+    }
+
+    .grid .grid-item:nth-child(n+7){
+        display: none;
+    }
+
+    .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12{
+        width: 100%;
+    }
+
+    /* Menu */
+    #menu{
+        display: none;
+    }
+
+    header{
+        align-items: center;
+    }
+
+    .main-container{
+        padding: 1rem 3rem;
+    }
+
+    /* Ajustes específicos para títulos principales en tablets */
+    .projects-main-title {
+        font-size: 2.8rem;
+        letter-spacing: 1.5rem;
+        padding-left: 1.5rem;
+    }
+
+    .contacto-main-title {
+        font-size: 2.5rem;
+        letter-spacing: 1.5rem;
+        padding-left: 1.5rem;
+    }
+}
+
+/* Mobile 768px y inferiores */
+@media screen and (max-width: 768px){
+    .grid{
+        padding: 0 1rem;
+    }
+
+    .grid .grid-item{
+        width: calc(100% / 3);
+    }
+
+    .grid .grid-item:nth-child(n+4){
+        display: none;
+    }
+
+    .pre-title{
+        font-size: 0.7rem;
+        margin: 5rem;
+    }
+
+    .pre-title:hover{
+        letter-spacing: 1rem;
+    }
+
+    #hero-section h1{
+        font-size: 2.5rem;
+        margin: 0 5rem;
+    }
+
+    #hero-section h1:hover{
+        font-size: 4rem;  
+        font-weight: 950;
+    }
+    
+    #logo{
+        width: 3rem;
+        margin: 0rem;
+        padding-bottom: 0rem;
+        filter: invert(1);
+    }
+
+    .hero-isotipo {
+        height: 120%;
+    }
+
+    .img-desktop{
+        display: none;
+    }
+
+    .img-mobile{
+        display: block;
+    }
+
+    .cta-button a:hover{
+        padding: 1rem 7rem 1rem 7rem;
+        letter-spacing: 0.8rem;
+    }
+
+    #about-section{
+        font-size: 2.5vw;
+        margin: 2rem 2rem 2rem 2rem;
+        padding: 2rem 1rem;
+    }
+    
+    .services-section {
+        margin: 2rem 2rem;
+        padding: 0;
+        font-size: 2.5vw;
+    }
+
+    #contacto div{
+        padding: 1vw;
+    }
+
+    .contacto-datos-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .contacto-main-title {
+        font-size: 2rem;
+        letter-spacing: 1.2rem;
+        padding: 1rem 0;
+        padding-left: 1.2rem;
+    }
+
+    .contacto-main-title:hover{
+        letter-spacing: 2rem;
+        padding-left: 2rem;
+    }
+
+    .projects-main-title {
+        font-size: 2rem;
+        letter-spacing: 1.2rem;
+        padding-left: 1.2rem;
+    }
+
+    .projects-main-title:hover {
+        letter-spacing: 2rem;
+        padding-left: 2rem;
+    }
+
+    .contenedor-imagen-inferior .imagen-ajustable {
+        top: 0rem;
+        left: 0rem;
+        width: 180%;        
+    }
+
+    /* --- CORRECCIONES PARA MÓVIL --- */
+
+    /* Selector de sección (Diseño / Escritura) en columna para móvil */
+    .projects-filter-bar {
+        flex-direction: column;
+        width: 100%;
+        align-items: stretch;
+        gap: 0.5rem;
+        box-sizing: border-box;
+        padding: 0 1.5rem;
+    }
+
+    .filter-option {
+        width: 100%;
+        text-align: center;
+        padding: 0.8rem 1rem;
+        letter-spacing: 0.8rem;
+        padding-left: 0.8rem;
+    }
+
+    .filter-option:hover,
+    .filter-option.active {
+        letter-spacing: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    /* Grid general para móvil */
+    #contenedor-proyectos {
+        grid-template-columns: 1fr; 
+        grid-auto-rows: 220px;
+    }
+    
+    /* 1. Aplanamos por defecto todos los elementos a 1x1 en móvil */
+    .grid-item-2x1, 
+    .grid-item-2x2, 
+    .grid-item-1x2,
+    #contenedor-proyectos > * {
+        grid-column: span 1 !important;
+        grid-row: span 1 !important;
+        width: 100% !important;
+        height: auto;
+    }
+
+    /* 2. EXCEPCIÓN: Únicamente las tarjetas 1x2 de la sección de escrituras mantienen las 2 filas */
+    #contenedor-proyectos .grid-item-1x2.escritura {
+        grid-column: span 1 !important;
+        grid-row: span 2 !important;
+        width: 100% !important;
+        height: auto;
+    }
+}

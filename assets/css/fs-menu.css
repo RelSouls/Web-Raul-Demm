@@ -1,0 +1,160 @@
+/* MENÚ FULLSCREEN JS */
+/* ----------------------------------------------------- */
+
+#hamburger button {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+/* SELECTOR DE MENU */
+/*--------------------------------*/
+
+#hamburger button{
+   background-color: transparent;
+   box-shadow: none;
+}
+
+#hamburger button:hover{
+    background-color: transparent;
+    box-shadow: none;
+}
+
+#hamburger button:active{
+    background-color: transparent;
+    box-shadow: none;
+}
+
+
+.menu-toggle {
+	display: none;
+	justify-content: center;
+	align-items: center;
+	background: transparent!important;
+	border: hidden;
+	transition: all 0.2s ease-in-out;
+	cursor: pointer;
+	z-index: 999;
+    padding: 12px;
+}
+
+.menu-toggle:hover{
+	background-color: none;
+}
+
+
+/* MENU BAR */
+/*--------------------------------*/
+
+.menu-toggle.active .menu-bar[data-position=top] {
+	transform: translateY(0) rotate(45deg) scaleX(1.1);
+}
+
+.menu-toggle.active .menu-bar[data-position=bottom] {
+	transform: translateY(0) rotate(-45deg) scaleX(1.1);
+}
+
+
+
+.menu-bar {
+    position: absolute;
+    width: 32px;
+    height: 2px;
+    background: var(--light-color);
+    transition-property: transform;
+    transition: all 0.2s ease-out;
+}
+
+    .menu-bar[data-position=bottom] {
+        transform: translateY(6px);
+    }
+
+    .menu-bar[data-position=top] {
+        transform: translateY(-6px);
+    }
+
+#fsmenu-left{
+	position: fixed;
+	top:0;
+	transform: translatex(101vw);
+	/* background-color: var(--primary-color); */
+	background: var(--dark-color);
+	opacity: 70%;
+	height: 100%;
+	width: 50vw;
+	padding: 8rem 4rem 3rem 6rem;
+	transition: all ease-in-out 300ms;
+	z-index: 99!important;
+	text-align: end;
+}
+
+.left-active{
+	transform: translatex(50vw)!important;
+	transition: all ease-in 250ms;
+}
+
+.menu-right{
+	opacity: 1;
+	transition: all ease-out 250ms;
+}
+.right-active{
+	opacity: 0;
+	transition: all ease-in 250ms;
+}
+
+/* OVERLAY */
+/*--------------------------------*/
+.fsmenu-overlay{
+	position: fixed;
+	transform: translatex(0);
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(32, 28, 28, 0.65);
+	z-index: 995;
+	backdrop-filter: blur(10px);
+	pointer-events: none;
+	transition: all 0.3s ease-in-out;
+}
+
+.overlay-active{
+	transform: translatex(0);
+	opacity: 1;
+	transition: all 0.3s ease-in-out;
+	pointer-events: auto;
+}
+
+/* MOBILE MENU */
+/*--------------------------------*/
+
+.mobile-menu{
+	font-size: 1rem;
+	list-style-type: none;
+}
+
+
+.mobile-menu a{
+	text-decoration: none;
+	color: var(--light-color);
+	font-family: var(--text-font);
+	text-transform: lowercase;
+}
+
+
+
+/* Tablet < 1024px */
+@media screen and (max-width: 1024px){
+    /* Contenedores */
+
+	.menu-toggle{
+		display: flex;
+	}
+    
+}
+
+#blur{
+	pointer-events: none;
+	opacity: 1;
+	position: fixed;
+	backdrop-filter: blur(2);
+}
+

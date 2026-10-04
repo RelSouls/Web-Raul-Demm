@@ -1,0 +1,357 @@
+@import url(styles.css);
+/* ==========================================
+   1. CONTENEDORES Y ESTRUCTURA GENERAL
+   ========================================== */
+
+/* Contenedor principal centrado */
+.detalle-contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Espaciado superior para que el contenido no quede oculto bajo el header fijo */
+/* body {
+  padding-top: 5.4rem;
+} */
+
+header{
+   background-color: rgb(from var(--dark-color) r g b / 0.5);
+}
+
+
+/* ==========================================
+   3. BANNER DE ANCHO COMPLETO (PORTADA)
+   ========================================== */
+
+.portada-banner {
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    height: 26rem;
+    overflow: hidden;
+}
+
+.portada-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+/* Capa de degradado inferior para fundir el título */
+.banner-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 100%);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    overflow: hidden; /* Esto corta cualquier espacio fantasma que intente escapar por abajo */
+}
+
+/* Título dinámico del banner */
+.titulo-banner {
+  font-family: var(--heading-font);
+  color: var(--light-color);
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+  margin: 0;
+  line-height: 0.85;
+  white-space: nowrap;
+  
+  /* --- TOQUE PRO DE DIRECCIÓN DE ARTE --- */
+  letter-spacing: 0.15em;            /* Espaciado elegante y proporcional al tamaño de la letra */
+  
+  /* text-shadow: 0 4px 25px rgba(0, 0, 0, 0.5); */
+  transition: all 0.2s ease;
+  
+  /* Empuje milimétrico hacia abajo para que muerda el borde */
+  transform: translateY(0.1em);
+}
+
+.titulo-banner:hover{
+  letter-spacing: 0.16em;
+  transform: translateY(0.1em) scale(1.05);
+}
+
+
+/* ==========================================
+   4. LAYOUT DE DOS COLUMNAS (MULTIMEDIA + TEXTO)
+   ========================================== */
+
+.proyecto-grid-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3rem;
+  align-items: start;
+  margin-bottom: 5rem;
+}
+
+/* Columna Izquierda: Multimedia */
+.columna-multimedia {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.visor-principal {
+  width: 100%;
+  height: 450px;
+  background: #111;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.visor-principal img,
+.visor-principal video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Selector de miniaturas inferior (Carrusel horizontal) */
+.selector-miniaturas {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent;
+}
+
+.selector-miniaturas::-webkit-scrollbar {
+  height: 6px;
+}
+
+.selector-miniaturas::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.selector-miniaturas::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+.selector-miniaturas::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+
+.miniatura-item {
+  position: relative;
+  width: 80px;
+  height: 60px;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0.6;
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.miniatura-item img, 
+.miniatura-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.miniatura-item:hover {
+  opacity: 1;
+}
+
+.miniatura-item.activa {
+  opacity: 1;
+  border-color: #000;
+}
+
+.badge-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-size: 10px;
+}
+
+/* Columna Derecha: Texto e Información */
+.columna-info .tarjeta-categoria {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  letter-spacing: 3px;
+  display: block;
+  margin: 0rem 0rem 3rem 0rem;
+  padding: 0 0 0 1rem;
+  border-left: 4px solid var(--primary-color);
+
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Estado final cuando se activa la animación */
+.columna-info .tarjeta-categoria.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.detalle-texto {
+  line-height: 1.7;
+  font-size: 14px;
+  color: var(--dark-color);
+}
+
+.detalle-texto p {
+  margin-bottom: 1.2rem;
+}
+
+.detalle-texto #detalle-descripcion{
+  opacity: 75%;
+}
+
+.detalle-texto #detalle-extra{
+  font-size: 14px;
+  text-align: end;
+  color: var(--primary-color);
+}
+
+.detalle-texto #detalle-extra.con-borde {
+  border-bottom: 2px solid var(--primary-color);
+  padding: 0.3rem 0rem;
+}
+
+/* ==========================================
+   VISOR MULTIMEDIA EN PRIMER PLANO (LIGHTBOX)
+   ========================================== */
+
+/* El visor principal de la página ahora muestra el cursor de lupa/clic */
+.visor-principal {
+  cursor: pointer;
+  position: relative;
+}
+
+.visor-principal::after {
+  content: "ampliar";
+  font-family: var(--text-font);
+  letter-spacing: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* <-- Esto lo centra de forma milimétrica */
+  transform-origin: center center;
+  background: var(--primary-color);
+  color: var(--light-color);
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.visor-principal:hover::after {
+  opacity: 1;
+}
+
+/* Fondo oscuro de pantalla completa */
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Estado activo cuando se abre */
+.lightbox-overlay.activo {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Contenedor interno para asegurar que la imagen/vídeo se vea completa */
+.lightbox-contenido {
+  max-width: 90vw;
+  max-height: 90vh;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.lightbox-contenido img,
+.lightbox-contenido video {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain; /* Garantiza que se vea completa aunque sea vertical u horizontal */
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Botón de cierre (X) */
+.lightbox-btn-cerrar {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background: transparent;
+  border: none;
+  color: var(--primary-color);
+  font-size: 3rem;
+  cursor: pointer;
+  z-index: 10000;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.lightbox-btn-cerrar:hover {
+  color: var(--primary-color-light);
+  transform: scale(1.1);
+}
+
+/* ==========================================
+   5. RESPONSIVE / ADAPTABILIDAD MÓVIL
+   ========================================== */
+
+@media (max-width: 900px) {
+  .proyecto-grid-layout {
+    grid-template-columns: 1fr; /* Pasa a una sola columna en pantallas medianas/pequeñas */
+  }
+}
+
+@media (max-width: 768px) {
+  .portada-banner {
+    height: 350px;
+  }
+  
+  .titulo-banner {
+    white-space: normal; /* Permite salto de línea en móviles para evitar recortes */
+    font-size: 4rem !important; 
+  }
+}

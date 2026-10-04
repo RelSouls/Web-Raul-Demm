@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raúl Demm | Diseño & Escritura</title>
+
+    <!-- Favicón -->
+    <link rel="icon" href="assets/img/Favicón.svg">
+
+    <!-- Estilos globales -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/fs-menu.css">
+    <link rel="stylesheet" href="assets/css/style_writing.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Header / Menú Superior -->
+    <header class="capa-top flex-row main-container">
+        <div class="flex-row center">
+            <div id="logo">
+                <a href="index.html">
+                    <img class="img-desktop" src="assets/img/Favicón.svg">
+                    <img class="img-mobile" src="assets/img/Favicón.svg">
+                </a>
+            </div>
+        </div>
+        <nav>
+            <ul id="menu">
+                <li><a href="index.html#hero-section">Inicio</a></li>
+                <li><a href="index.html#sobremi">Sobre mí</a></li>
+                <li><a href="index.html#proyectos">Proyectos</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
+            </ul>
+            <button class="menu-toggle" id="menu-toggle">
+                <div class="menu-bar" data-position="top"></div>
+                <div class="menu-bar" data-position="bottom"></div>      
+            </button>
+        </nav>
+    </header>
+
+    <!-- Menú Pantalla Completa (Móvil) -->
+    <div id="fsmenu-left" class="flex-column padding-big">
+        <ul class="flex-column gap-xl mobile-menu">
+            <li><a href="index.html#hero-section">Inicio</a></li>
+            <li><a href="index.html#sobremi">Sobre mí</a></li>
+            <li><a href="index.html#proyectos">Proyectos</a></li>
+            <li><a href="index.html#contacto">Contacto</a></li>
+        </ul>
+    </div>
+
+    <!-- Contenido Principal de Detalle -->
+    <main class="writing-detail-container">
+        
+        <a href="index.html?section=escritura#proyectos" class="btn-volver">&larr; Volver al portfolio</a>
+
+        <!-- Bloque Superior: Ficha Técnica + Multimedia Principal -->
+        <div class="writing-top-grid">
+            <!-- Columna Izquierda: Ficha y Sinopsis -->
+            <div class="writing-ficha">
+                <h1 class="writing-title" id="det-titulo">Cargando título...</h1>
+                
+                <ul class="ficha-meta-list">
+                    <li class="ficha-meta-item"><span>Autor:</span> <span id="det-autor" class="ficha-meta-item-content">--</span></li>
+                    <li class="ficha-meta-item"><span>Portada:</span> <span id="det-disenador" class="ficha-meta-item-content">--</span></li>
+                    <li class="ficha-meta-item"><span>Nº de palabras:</span> <span id="det-palabras" class="ficha-meta-item-content">--</span></li>
+                    <li class="ficha-meta-item"><span>Género:</span> <span id="det-genero" class="ficha-meta-item-content">--</span></li>
+                    <li class="ficha-meta-item"><span>Estado:</span> <span id="det-estado" class="ficha-meta-item-content">--</span></li>
+                </ul>
+
+                <div class="writing-synopsis-box" id="det-sinopsis">
+                    Cargando sinopsis...
+                </div>
+            </div>
+
+            <!-- Columna Derecha: Navegador Multimedia Principal -->
+            <div>
+                <div class="writing-media-browser" id="main-media-container">
+                    <!-- El script inyectará aquí la imagen o vídeo principal -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Bloque Intermedio 1: Personajes (Imagen izquierda, texto derecha) -->
+        <section class="writing-sub-section" id="section-personajes-wrapper" style="display: none;">
+            <div>
+                <div class="visualizer-container" id="personajes-visualizer">
+                    <button class="viz-arrow viz-prev" id="pers-prev">&#10094;</button>
+                    <img id="personaje-img" src="" alt="Personaje">
+                    <button class="viz-arrow viz-next" id="pers-next">&#10095;</button>
+                </div>
+                <div class="viz-dots" id="personajes-dots"></div>
+            </div>
+            <div class="visualizer-info-column">
+                <h3 class="viz-subtitle">Personajes</h3>
+                <p class="viz-description" id="personaje-desc">Selecciona o navega por los personajes para ver su descripción.</p>
+            </div>
+        </section>
+
+        <!-- Bloque Intermedio 2: Objetos (Texto izquierda, imagen derecha) -->
+        <section class="writing-sub-section" id="section-objetos-wrapper" style="display: none;">
+            <div class="visualizer-info-column">
+                <h3 class="viz-subtitle">Objetos</h3>
+                <p class="viz-description" id="objeto-desc">Selecciona o navega por los objetos para ver su descripción.</p>
+            </div>
+            <div>
+                <div class="visualizer-container" id="objetos-visualizer">
+                    <button class="viz-arrow viz-prev" id="obj-prev">&#10094;</button>
+                    <img id="objeto-img" src="" alt="Objeto">
+                    <button class="viz-arrow viz-next" id="obj-next">&#10095;</button>
+                </div>
+                <div class="viz-dots" id="objetos-dots"></div>
+            </div>
+        </section>
+
+        <!-- Bloque Inferior Opcional: Fragmento Literario de Ancho Completo -->
+        <section class="writing-fragment-section" id="section-fragmento-wrapper" style="display: none;">
+            <!-- <h3 class="writing-fragment-title">Léelo</h3> -->
+            <div class="writing-fragment-content" id="det-fragmento">
+                <!-- Se inyectará el contenido del .txt aquí -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Scripts de la página -->
+    <script src="assets/js/hamburger.js"></script>
+    <!-- OPACIDAD DINÁMICA HEADER -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        const header = document.querySelector("header");
+        if (!header) return;
+
+        // Configuración de variables (fáciles de modificar)
+        const maxScroll = 320; // Distancia en píxeles donde se detiene la transición (equivalente a 10rem si 1rem=16px)
+        const minOpacity = 0.5; // Opacidad mínima a la que se detendrá (70%)
+
+        window.addEventListener("scroll", () => {
+            const scrollY = window.scrollY;
+
+            // Calculamos la opacidad de forma proporcional entre 1 y minOpacity
+            let opacity = 1 - (scrollY / maxScroll) * (1 - minOpacity);
+
+            // Limitamos el valor para que no baje de minOpacity ni suba de 1
+            if (opacity < minOpacity) {
+                opacity = minOpacity;
+            } else if (opacity > 1) {
+                opacity = 1;
+            }
+
+            // Aplicamos el color de fondo usando rgba con el color oscuro y la opacidad calculada
+            // Nota: Asegúrate de cambiar los valores RGB si tu --dark-color es distinto de #200005 (RGB: 32, 0, 5)
+            header.style.backgroundColor = `rgba(32, 0, 5, ${opacity})`;
+        });
+    });
+    </script>
+    <!-- -------CARGA DE NOVELA-------- -->
+    <script>
+        document.addEventListener("DOMContentLoaded", async () => {
+        const params = new URLSearchParams(window.location.search);
+        const novelaId = params.get('id');
+
+        const tituloEl = document.getElementById('det-titulo');
+        const sinopsisEl = document.getElementById('det-sinopsis');
+
+        if (!novelaId) {
+            tituloEl.textContent = "Novela no encontrada (Falta ID en la URL)";
+            return;
+        }
+
+        try {
+            const respuesta = await fetch('writings.json');
+            if (!respuesta.ok) throw new Error("No se pudo cargar el archivo writings.json");
+            
+            const novelas = await respuesta.json();
+            console.log("Novelas cargadas desde el JSON:", novelas); // <-- Esto saldrá sí o sí en la consola
+            
+            const novela = novelas.find(n => n.id === novelaId);
+
+            if (!novela) {
+                tituloEl.textContent = `Novela no encontrada (ID buscado: "${novelaId}")`;
+                sinopsisEl.textContent = "Revisa que el ID en la URL coincida con el writings.json";
+                return;
+            }
+
+            // Rellenar datos básicos
+            // Rellenar datos básicos
+            tituloEl.textContent = novela.titulo || "";
+            document.title = `${novela.titulo} | Raúl Demm`;
+            document.getElementById('det-autor').textContent = novela.autor || "Raúl de Miguel Martín";
+            document.getElementById('det-disenador').textContent = novela.disenadorPortada || "--";
+            document.getElementById('det-palabras').textContent = novela.palabras || "--";
+            document.getElementById('det-genero').textContent = novela.genero || "--";
+            document.getElementById('det-estado').textContent = novela.estado || "--";
+
+            // Cargar Sinopsis
+            if (novela.sinopsis) {
+                try {
+                    const resSinopsis = await fetch(novela.sinopsis);
+                    if (resSinopsis.ok) {
+                        const textoSinopsis = await resSinopsis.text();
+                        sinopsisEl.innerHTML = textoSinopsis; // Usa innerHTML para interpretar etiquetas <b>
+                    } else {
+                        sinopsisEl.textContent = "No se pudo cargar el archivo de sinopsis.";
+                    }
+                } catch (e) {
+                    console.error("Error al cargar la sinopsis.txt:", e);
+                    sinopsisEl.textContent = "Error de red al cargar la sinopsis.";
+                }
+            } else if (novela.sinopsis) {
+                sinopsisEl.innerHTML = novela.sinopsis;
+            } else {
+                sinopsisEl.textContent = "No hay sinopsis disponible.";
+            }
+            // Multimedia principal
+            const mainContainer = document.getElementById('main-media-container');
+            if (novela.multimediaPrincipal && novela.multimediaPrincipal.length > 0) {
+                const item = novela.multimediaPrincipal[0];
+                if (item.tipo === 'video') {
+                    mainContainer.innerHTML = `<video src="${item.url}" controls autoplay muted loop></video>`;
+                } else {
+                    mainContainer.innerHTML = `<img src="${item.url}" alt="${item.alt || 'Multimedia'}">`;
+                }
+            }
+
+            // Personajes
+            if (novela.personajes && novela.personajes.length > 0) {
+                document.getElementById('section-personajes-wrapper').style.display = 'grid';
+                initVisualizer(novela.personajes, 'personaje-img', 'personaje-desc', 'pers-prev', 'pers-next', 'personajes-dots');
+            }
+
+            // Objetos
+            if (novela.objetos && novela.objetos.length > 0) {
+                document.getElementById('section-objetos-wrapper').style.display = 'grid';
+                initVisualizer(novela.objetos, 'objeto-img', 'objeto-desc', 'obj-prev', 'obj-next', 'objetos-dots');
+            }
+
+            // Fragmento
+            if (novela.fragmentoTxt) {
+                const resFrag = await fetch(novela.fragmentoTxt);
+                if (resFrag.ok) {
+                    const textoFrag = await resFrag.text();
+                    document.getElementById('section-fragmento-wrapper').style.display = 'block';
+                    
+                    // Divide el texto por cada salto de línea y limpia espacios vacíos
+                    const parrafosHtml = textoFrag
+                        .split(/\r?\n/)
+                        .map(parrafo => parrafo.trim())
+                        .filter(parrafo => parrafo.length > 0) // Ignora líneas vacías si las hubiera
+                        .map(parrafo => `<p>${parrafo}</p>`)
+                        .join('');
+
+                    document.getElementById('det-fragmento').innerHTML = parrafosHtml;
+                }
+            }
+        } catch (error) {
+            console.error("Error crítico en la carga:", error);
+            tituloEl.textContent = "Error al cargar la novela";
+            sinopsisEl.textContent = "Revisa la consola (F12) para ver los detalles del error.";
+        }
+    });
+
+    function initVisualizer(dataArray, imgId, descId, prevBtnId, nextBtnId, dotsContainerId) {
+        let currentIndex = 0;
+        const imgEl = document.getElementById(imgId);
+        const descEl = document.getElementById(descId);
+        const prevBtn = document.getElementById(prevBtnId);
+        const nextBtn = document.getElementById(nextBtnId);
+        const dotsContainer = document.getElementById(dotsContainerId);
+
+        if (dataArray.length <= 1) {
+            prevBtn.classList.add('hidden');
+            nextBtn.classList.add('hidden');
+        }
+
+        dotsContainer.innerHTML = "";
+        dataArray.forEach((_, idx) => {
+            const dot = document.createElement('div');
+            dot.className = `viz-dot ${idx === 0 ? 'active' : ''}`;
+            dot.addEventListener('click', () => {
+                currentIndex = idx;
+                updateView();
+            });
+            dotsContainer.appendChild(dot);
+        });
+
+        const dots = dotsContainer.querySelectorAll('.viz-dot');
+
+        function updateView() {
+            const currentItem = dataArray[currentIndex];
+            imgEl.src = currentItem.url;
+            descEl.innerHTML = currentItem.descripcion || "";
+
+            dots.forEach((dot, idx) => {
+                if (idx === currentIndex) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + dataArray.length) % dataArray.length;
+            updateView();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % dataArray.length;
+            updateView();
+        });
+
+        updateView();
+    }
+    </script>
+</body>
+</html>

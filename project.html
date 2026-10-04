@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cargando proyecto...</title>
+    <title>Raúl Demm | Diseño & Escritura</title>
+
+    <!-- Favicón = icono de la pestaña del navegador -->
+    <link rel="icon" href="assets/img/Favicón.svg">
+
+    <!-- Traemos la hoja de estilos style.css -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/style-project.css">
+    <link rel="stylesheet" href="assets/css/fs-menu.css">
+    <link rel="stylesheet" href="assets/css/change-mode.css">
+</head>
+<body>
+    <!-- -------------HEADER------------- -->
+    <header class="capa-top flex-row main-container">
+        <div class="flex-row center">
+            <div id="logo">
+                <a href="index.html">
+                    <img class="img-desktop" src="assets/img/Favicón.svg">
+                    <img class="img-mobile" src="assets/img/Favicón.svg">
+                </a>
+            </div>
+            <!--Cambio de modo LIGHT / DARK -->
+            <!-- <input type="checkbox" id="dark-mode-toggle"/>
+            <label for="dark-mode-toggle" class="toggle"></label> -->
+        </div>
+
+        <nav>
+            <ul id="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <!-- <li>|</li> -->
+                <li><a href="index.html#sobremi">Sobre mí</a></li>
+                <!-- <li>|</li> -->
+                <li><a href="index.html#proyectos">Proyectos</a></li>
+                <!-- <li>|</li> -->
+                <li><a href="index.html#contacto">Contacto</a></li>
+            </ul>
+
+
+           <!-- HAMBURGER -->
+            <button class="menu-toggle" id="menu-toggle">
+                <div class="menu-bar" data-position="top"></div>
+                <div class="menu-bar" data-position="bottom"></div>      
+            </button>
+        </nav>
+        <!-- ////////////////////////////////////////////////// -->
+
+    </header>
+
+    <!-- BANNER DE ANCHO COMPLETO -->
+    <div class="portada-banner">
+        <img id="detalle-portada" src="" alt="Portada del proyecto">
+        <div class="banner-overlay">
+            <!-- El título se redimensionará dinámicamente y se anclará abajo -->
+            <h1 id="detalle-titulo-banner" class="titulo-banner"></h1>
+        </div>
+    </div>
+
+    <!-- Estructura visual de la página de detalle -->
+    <main class="detalle-contenedor">
+
+        <a href="index.html?section=diseno#proyectos" class="btn-volver">&larr; Volver al portfolio</a>
+
+        <div class="proyecto-grid-layout">
+            <!-- COLUMNA IZQUIERDA: Visor multimedia y selector de miniaturas -->
+            <div class="columna-multimedia">
+                <!-- Visor principal (imagen o vídeo activo) -->
+                <div id="visor-principal" class="visor-principal">
+                    <!-- Se inyecta dinámicamente -->
+                </div>
+
+                <!-- Lista de miniaturas inferiores para cambiar -->
+                <div id="selector-miniaturas" class="selector-miniaturas">
+                    <!-- Se inyectan dinámicamente -->
+                </div>
+            </div>
+
+            <!-- COLUMNA DERECHA: Títulos y descripciones -->
+            <div class="columna-info">
+                <span id="detalle-categoria" class="tarjeta-categoria"></span>
+                <h1 id="detalle-titulo"></h1>
+                
+                <div class="detalle-texto">
+                    <p id="detalle-descripcion"></p>
+                    <p id="detalle-extra"></p>
+                </div>
+            </div>
+
+            <!-- VISOR MULTIMEDIA EN PRIMER PLANO (LIGHTBOX) -->
+            <div id="lightbox-visor" class="lightbox-overlay">
+                <button id="lightbox-cerrar" class="lightbox-btn-cerrar">&times;</button>
+                <div id="lightbox-contenido" class="lightbox-contenido">
+                    <!-- Se inyectará dinámicamente la imagen o vídeo en grande -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- EFECTO TYPEWRITER -->
+    <script>    
+    // Función para el efecto Typewriter por palabras respetando espacios y HTML
+    function aplicarTypewriterPalabras(elemento, velocidad = 35) {
+      if (!elemento) return;
+      
+      const htmlOriginal = elemento.innerHTML;
+      elemento.innerHTML = ""; 
+      
+      // Forzamos al contenedor a respetar espacios en blanco y saltos
+      elemento.style.whiteSpace = "pre-wrap";
+      
+      const tempDiv = document.createElement('div');
+      tempDiv.innerHTML = htmlOriginal;
+      
+      const todosLosSpans = [];
+
+      function procesarNodos(nodoOrigen, nodoDestino) {
+        nodoOrigen.childNodes.forEach(child => {
+          if (child.nodeType === Node.TEXT_NODE) {
+            const texto = child.textContent;
+            
+            // Dividimos por palabras pero conservando los espacios de separación de forma precisa
+            // Esta expresión captura cada palabra junto con los espacios que le siguen
+            const fragmentos = texto.match(/([^\s]+[\s]*)/g) || [texto];
+            
+            fragmentos.forEach(fragmento => {
+              const span = document.createElement("span");
+              span.textContent = fragmento;
+              span.style.opacity = "0";
+              span.style.display = "inline-block";
+              span.style.transform = "translateY(4px)";
+              span.style.transition = "opacity 0.4s ease, transform 0.4s ease";
+              
+              nodoDestino.appendChild(span);
+              todosLosSpans.push(span);
+            });
+            
+          } else if (child.nodeType === Node.ELEMENT_NODE) {
+            const nuevoElemento = document.createElement(child.tagName);
+            
+            Array.from(child.attributes).forEach(attr => {
+              nuevoElemento.setAttribute(attr.name, attr.value);
+            });
+            
+            nodoDestino.appendChild(nuevoElemento);
+            procesarNodos(child, nuevoElemento);
+          }
+        });
+      }
+
+      procesarNodos(tempDiv, elemento);
+
+      // Animación secuencial por palabra con espacio integrado
+      todosLosSpans.forEach((span, index) => {
+        setTimeout(() => {
+          span.style.opacity = "1";
+          span.style.transform = "translateY(0)";
+        }, index * velocidad);
+      });
+    }
+    </script>
+    <!-- Script de JavaScript para leer la URL, buscar en el JSON y rellenar -->
+    <script>
+      async function cargarDetalleProyecto() {
+        try {
+          const urlParams = new URLSearchParams(window.location.search);
+          const idProyecto = urlParams.get('id');
+
+          if (!idProyecto) {
+            document.body.innerHTML = "<h1 style='text-align:center; margin-top:50px;'>Error: No se ha especificado ningún proyecto.</h1><p style='text-align:center;'><a href='index.html'>Volver al inicio</a></p>";
+            return;
+          }
+
+          const respuesta = await fetch('projects.json');
+          const proyectos = await respuesta.json();
+          const proyectoEncontrado = proyectos.find(p => p.id === idProyecto);
+
+          if (!proyectoEncontrado) {
+            document.body.innerHTML = "<h1 style='text-align:center; margin-top:50px;'>Proyecto no encontrado.</h1><p style='text-align:center;'><a href='index.html'>Volver al inicio</a></p>";
+            return;
+          }
+
+          // Asignar textos y portada
+          const tituloTexto = proyectoEncontrado.titulo;
+          document.getElementById('detalle-titulo-banner').innerHTML = tituloTexto;
+          // Asignar categoría con animación de derecha a izquierda
+          const categoriaEl = document.getElementById('detalle-categoria');
+          categoriaEl.innerHTML = proyectoEncontrado.categoria;
+          
+          // Forzamos al navegador a "leer" el estado inicial pintado
+          void categoriaEl.offsetWidth;
+          
+          // Añadimos la clase visible para disparar la transición fluidamente
+          categoriaEl.classList.add('visible');
+          
+          //Asignar textos respetando etiquetas HTML y aplicando el efecto
+          const descElemento = document.getElementById('detalle-descripcion');
+          descElemento.innerHTML = proyectoEncontrado.descripcion;
+          aplicarTypewriterPalabras(descElemento, 35); // 35ms por palabra
+
+          const extraElemento = document.getElementById('detalle-extra');
+          extraElemento.innerHTML = proyectoEncontrado.detallesExtra;
+          aplicarTypewriterPalabras(extraElemento, 35);
+          
+          // Añadimos el borde y su padding dinámicamente para que no aparezca antes de tiempo
+          extraElemento.classList.add('con-borde');
+          
+          document.getElementById('detalle-portada').src = proyectoEncontrado.imagenMiniatura;
+          document.getElementById('detalle-portada').alt = tituloTexto;
+          document.title = `${tituloTexto} | Raúl Demm`;
+
+          // --- AJUSTE DINÁMICO DEL TAMAÑO DE FUENTE DEL TÍTULO ---
+          const elementoTitulo = document.getElementById('detalle-titulo-banner');
+          const longitud = tituloTexto.length;
+          
+          if (longitud < 10){
+            elementoTitulo.style.fontSize = "10rem"; 
+          }
+          else if(longitud < 15) {
+              elementoTitulo.style.fontSize = "8rem";
+          } else if (longitud < 22) {
+              elementoTitulo.style.fontSize = "5.2rem";
+          } else if (longitud < 30) {
+              elementoTitulo.style.fontSize = "4rem";
+          } else {
+              elementoTitulo.style.fontSize = "3rem";
+          }
+
+          // --- CONFIGURACIÓN DEL VISOR FLOTANTE (LIGHTBOX) ---
+          const lightbox = document.getElementById('lightbox-visor');
+          const lightboxContenido = document.getElementById('lightbox-contenido');
+          const btnCerrar = document.getElementById('lightbox-cerrar');
+
+          function abrirLightbox(item) {
+            if (!lightbox || !lightboxContenido) return;
+            lightboxContenido.innerHTML = "";
+            if (item.tipo === "video") {
+              const video = document.createElement('video');
+              video.src = item.url;
+              video.controls = true;
+              video.autoplay = true;
+              lightboxContenido.appendChild(video);
+            } else {
+              const img = document.createElement('img');
+              img.src = item.url;
+              img.alt = proyectoEncontrado.titulo;
+              lightboxContenido.appendChild(img);
+            }
+            lightbox.classList.add('activo');
+          }
+
+          function cerrarLightbox() {
+            if (!lightbox || !lightboxContenido) return;
+            lightbox.classList.remove('activo');
+            lightboxContenido.innerHTML = "";
+          }
+
+          if (btnCerrar) {
+            btnCerrar.addEventListener('click', cerrarLightbox);
+          }
+          if (lightbox) {
+            lightbox.addEventListener('click', (e) => {
+              if (e.target === lightbox) {
+                cerrarLightbox();
+              }
+            });
+          }
+
+          // Configurar la galería multimedia dinámica
+          const visor = document.getElementById('visor-principal');
+          const selector = document.getElementById('selector-miniaturas');
+          
+          visor.innerHTML = "";
+          selector.innerHTML = "";
+
+          if (proyectoEncontrado.multimedia && proyectoEncontrado.multimedia.length > 0) {
+            
+            // Función interna para pintar el elemento activo en el visor grande
+            function mostrarEnVisor(item) {
+              visor.innerHTML = "";
+              if (item.tipo === "video") {
+                const video = document.createElement('video');
+                video.src = item.url;
+                video.controls = true;
+                video.autoplay = false;
+                video.style.width = "100%";
+                video.style.height = "100%";
+                video.style.objectFit = "cover";
+                visor.appendChild(video);
+              } else {
+                const img = document.createElement('img');
+                img.src = item.url;
+                img.alt = proyectoEncontrado.titulo;
+                img.style.width = "100%";
+                img.style.height = "100%";
+                img.style.objectFit = "cover";
+                visor.appendChild(img);
+              }
+              // Al hacer clic en el visor principal, se abre a pantalla completa
+              visor.onclick = () => abrirLightbox(item);
+            }
+
+            // Mostrar el primer elemento por defecto al cargar la página
+            mostrarEnVisor(proyectoEncontrado.multimedia[0]);
+
+            // Generar la lista de miniaturas inferiores
+            proyectoEncontrado.multimedia.forEach((item, index) => {
+              const thumb = document.createElement('div');
+              thumb.className = `miniatura-item ${index === 0 ? 'activa' : ''}`;
+              
+              if (item.tipo === "video") {
+                thumb.innerHTML = `<video src="${item.url}" muted></video><div class="badge-video">▶</div>`;
+              } else {
+                thumb.innerHTML = `<img src="${item.url}" alt="Miniatura ${index + 1}">`;
+              }
+
+              // Evento al hacer clic en una miniatura de la lista
+              thumb.addEventListener('click', () => {
+                document.querySelectorAll('.miniatura-item').forEach(el => el.classList.remove('activa'));
+                thumb.classList.add('activa');
+                mostrarEnVisor(item);
+              });
+
+              selector.appendChild(thumb);
+            });
+          }
+
+        } catch (error) {
+          console.error("Error al cargar el detalle del proyecto:", error);
+        }
+      }
+
+      document.addEventListener('DOMContentLoaded', cargarDetalleProyecto);
+    </script>
+</body>
+</html>

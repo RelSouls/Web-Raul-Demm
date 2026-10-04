@@ -1,0 +1,60 @@
+:has(#dark-mode-toggle:checked) {
+/*   --primary-color: #FCFAF2;
+  --secondary-color: #1C0B10;
+  --accent-color: #1C0B10;
+  --accent-secondary-color: #0071FF;
+
+  --primary-color: #491215;
+  --primary-color-light:#531619;
+  --accent-color: #e94949;
+  --accent-color-dark: #982a2a;
+  --secondary-color: #ebd0b2;
+  --light-color: #f5f2ec;
+  --light-color-transparent: rgb(247, 247, 242, 0.6); */
+
+  --primary-color: #f5f2ec;
+  --primary-color-light:#f1d4d4;
+  --accent-color: #e94949;
+  --accent-color-dark: #982a2a;
+  --secondary-color: #ebd0b2;
+  /* --light-color: #491215; */
+  --light-color: #2d0b0c;
+  --light-color-transparent: rgba(73, 18, 21, 0.6);
+}
+
+/* *******************************************************/
+/* LIGHT / DARK MODE *************************************/
+/* *******************************************************/
+
+#dark-mode-toggle {
+  display: none;
+}
+
+.toggle {
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  background: transparent;
+  border: 1px solid var(--light-color);
+  border-radius: 30px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.3s;
+  scale: 0.75;
+}
+
+.toggle::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 19px;
+  height: 19px;
+  background: var(--light-color);
+  border-radius: 50%;
+  transition: transform 0.2s;
+}
+
+#dark-mode-toggle:checked + .toggle::before {
+  transform: translateX(30px);
+}
