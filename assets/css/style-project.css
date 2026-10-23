@@ -3,9 +3,9 @@
    1. CONTENEDORES Y ESTRUCTURA GENERAL
    ========================================== */
 
-/* Contenedor principal centrado */
+/* Contenedor principal centrado y adaptado a una sola columna amplia */
 .detalle-contenedor {
-  max-width: 1200px;
+  max-width: 900px; /* Ancho más cómodo para lectura y visualización centrada a una columna */
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -77,29 +77,32 @@ header{
 
 
 /* ==========================================
-   4. LAYOUT DE DOS COLUMNAS (MULTIMEDIA + TEXTO)
+   4. LAYOUT DE UNA SOLA COLUMNA (PILAR VERTICAL)
    ========================================== */
 
+/* Transformamos el antiguo grid en una columna vertical fluida */
 .proyecto-grid-layout {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 3rem;
-  align-items: start;
+  width: 100%;
   margin-bottom: 5rem;
 }
 
-/* Columna Izquierda: Multimedia */
+/* Bloque Multimedia superior */
 .columna-multimedia {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  width: 100%;
 }
 
-/* VISOR PRINCIPAL CON CENTRADO FLEXBOX Y FRANJAS NEGRAS */
+/* VISOR PRINCIPAL A GRAN FORMATO CON CENTRADO Y FRANJAS NEGRAS */
 .visor-principal {
   width: 100%;
-  height: 450px;
-  background: #1111111b; /* Fondo oscuro para las franjas (letterbox/pillarbox) */
+  height: 60vh; /* Ocupa una gran proporción vertical elegante en pantallas de escritorio */
+  min-height: 580px;
+  background: #111; /* Fondo oscuro para las franjas (letterbox/pillarbox) */
   border-radius: 8px;
   overflow: hidden;
   cursor: pointer;
@@ -115,15 +118,16 @@ header{
   max-height: 100%;
   width: auto;
   height: auto;
-  object-fit: contain; /* Garantiza que se vea completa con franjas si no encaja */
+  object-fit: contain; /* Garantiza que se vea completa manteniendo proporción y mostrando franjas */
 }
 
-/* Selector de miniaturas inferior (Carrusel horizontal) */
+/* Selector de miniaturas inferior (Carrusel horizontal centrado) */
 .selector-miniaturas {
   display: flex;
   gap: 10px;
   overflow-x: auto;
   padding-bottom: 10px;
+  justify-content: center; /* Centradas bajo el visor principal */
   scrollbar-width: thin;
   scrollbar-color: #ccc transparent;
 }
@@ -147,8 +151,8 @@ header{
 
 .miniatura-item {
   position: relative;
-  width: 80px;
-  height: 60px;
+  width: 90px;
+  height: 70px;
   border-radius: 6px;
   overflow: hidden;
   cursor: pointer;
@@ -171,7 +175,7 @@ header{
 
 .miniatura-item.activa {
   opacity: 1;
-  border-color: #000;
+  border-color: var(--primary-color);
 }
 
 .badge-video {
@@ -186,14 +190,18 @@ header{
   font-size: 10px;
 }
 
-/* Columna Derecha: Texto e Información */
+/* Bloque de Texto e Información inferior */
+.columna-info {
+  width: 100%;
+}
+
 .columna-info .tarjeta-categoria {
   font-size: 16px;
   text-transform: uppercase;
   color: var(--primary-color);
   letter-spacing: 3px;
   display: block;
-  margin: 0rem 0rem 3rem 0rem;
+  margin: 0rem 0rem 2rem 0rem;
   padding: 0 0 0 1rem;
   border-left: 4px solid var(--primary-color);
 
@@ -208,22 +216,22 @@ header{
 }
 
 .detalle-texto {
-  line-height: 1.7;
-  font-size: 14px;
+  line-height: 1.8;
+  font-size: 1.05rem;
   color: var(--dark-color);
 }
 
 .detalle-texto p {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.5rem;
 }
 
 .detalle-texto #detalle-descripcion{
-  opacity: 75%;
+  opacity: 85%;
 }
 
 .detalle-texto #detalle-extra{
-  font-size: 14px;
-  text-align: end;
+  font-size: 1rem;
+  text-align: right;
   color: var(--primary-color);
 }
 
@@ -247,7 +255,7 @@ header{
   transform-origin: center center;
   background: var(--primary-color);
   color: var(--light-color);
-  padding: 4px 10px;
+  padding: 6px 14px;
   font-size: 12px;
   border-radius: 4px;
   opacity: 0;
@@ -324,12 +332,6 @@ header{
    5. RESPONSIVE / ADAPTABILIDAD MÓVIL
    ========================================== */
 
-@media (max-width: 900px) {
-  .proyecto-grid-layout {
-    grid-template-columns: 1fr;
-  }
-}
-
 @media (max-width: 768px) {
   .portada-banner {
     height: 350px;
@@ -337,16 +339,14 @@ header{
   
   .titulo-banner {
     white-space: normal;
-    font-size: 4rem !important; 
+    font-size: 3.2rem !important; 
   }
 
-  /* Altura del visor en móvil y mantenimiento de propiedades flex */
+  /* Visor principal adaptado a pantallas móviles en formato vertical fluido */
   .visor-principal {
-    height: 350px !important; 
+    height: 45vh !important; 
+    min-height: 280px !important;
     width: 100% !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
   }
 
   .selector-miniaturas {
@@ -356,48 +356,15 @@ header{
     padding-bottom: 0 !important;
   }
 
-  /* PÁGINAS DETALLE */
   body, html {
     max-width: 100vw;
     overflow-x: hidden;
   }
 
-  .detalle-contenedor, 
-  .writing-detail-container {
+  .detalle-contenedor {
     width: 100% !important;
-    max-width: 100vw !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
     padding-left: 1rem !important;
     padding-right: 1rem !important;
     box-sizing: border-box !important;
-  }
-
-  .columna-multimedia,
-  .writing-media-browser,
-  .visualizer-container {
-    width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;       
-    min-height: unset !important;  
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;     
-    overflow: hidden !important;   
-    box-sizing: border-box !important;
-    margin-bottom: 1.5rem !important;
-    background: transparent !important;
-  }
-
-  .columna-multimedia img,
-  .writing-media-browser img,
-  .visualizer-container img {
-    display: block !important;
-    width: auto !important;
-    height: auto !important;
-    max-width: 100% !important;  
-    max-height: 100% !important; 
-    object-fit: contain !important; 
-    margin: auto !important;     
   }
 }
